@@ -1,0 +1,626 @@
+
+
+.about-page{
+    overflow:hidden;
+    background:#fff;
+}
+
+.about-banner{
+    position:relative;
+
+    min-height:290px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+
+    color:#fff;
+
+    background-image:url("../assets/about/about-banner.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.about-banner::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(
+        circle at 18% 30%,
+        rgba(58, 55, 51, 0.22),
+        transparent 30%
+    );
+}
+
+.about-banner-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(145, 145, 150, 0.92),
+        rgba(80, 80, 83, 0.8),
+        rgba(85, 85, 89, 0.62)
+    );
+}
+
+.about-banner-content{
+
+    position:relative;
+    z-index:2;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:42px 0;
+}
+
+.about-banner-subtitle{
+
+    color:var(--orange);
+
+    font-size:16px;
+    font-weight:800;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    margin-bottom:10px;
+}
+
+.about-banner h1{
+
+    color:#fff;
+
+    margin:0 0 15px;
+
+    font-size:clamp(2.3rem,3.5vw,2.8rem);
+
+    font-weight:800;
+}
+
+.about-breadcrumb{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    color:rgba(255,255,255,.85);
+
+    font-size:16px;
+}
+
+.about-breadcrumb a{
+
+    color:#fff;
+
+    transition:.3s;
+}
+
+.about-breadcrumb a:hover{
+
+    color:var(--orange);
+}
+
+/* =========================================================
+   ABOUT COMPANY
+========================================================= */
+
+.about-company{
+
+    padding:70px 0;
+}
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    520px
+    1fr;
+
+    gap:65px;
+
+    align-items:center;
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.about-image{
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 20px 55px
+    rgba(0,0,0,.12);
+}
+
+.about-image img{
+
+    width:100%;
+    height: 380px;
+    display:block;
+
+    transition:.5s;
+}
+
+.about-image:hover img{
+
+    transform:scale(1.05);
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.section-tag{
+
+    display:inline-flex;
+    align-items:center;
+
+    gap:10px;
+
+    padding:9px 18px;
+
+    margin-bottom:10px;
+
+    border-radius:40px;
+
+    color:var(--orange);
+
+    background:#fff3ea;
+
+    font-size:14px;
+    font-weight:700;
+}
+
+.section-tag i{
+
+    color:var(--orange);
+}
+
+.about-content h2{
+
+    color:#101522;
+
+    margin:0 0 22px;
+
+    font-size:42px;
+
+    line-height:1.2;
+
+    font-weight:800;
+}
+
+.about-content p{
+
+    color:#2c2c2e;
+
+    margin-bottom:18px;
+
+    font-size:16px;
+
+    line-height:1.9;
+}
+
+/* =========================================================
+   FULL CONTENT
+========================================================= */
+
+.about-full-content{
+
+    margin-top:25px;
+    padding-top:35px;
+}
+
+.about-full-content p{
+     color:#2c2c2e;
+    font-size:16px;
+
+    line-height:1.9;
+
+    margin:0;
+}
+/* =========================================================
+   COUNTER SECTION
+========================================================= */
+.about-counter-section{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:50px 0;
+
+    background:
+    linear-gradient(
+    135deg,
+    #111827 0%,
+    #1f2937 55%,
+    #3c3835 180%);
+}
+.counter-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 12% 20%, rgba(255,255,255,.08), transparent 28%),
+        radial-gradient(circle at 88% 82%, rgba(244,122,0,.18), transparent 30%);
+}
+
+.about-counter-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================================================
+   COUNTRY STRIP
+========================================================= */
+
+.country-strip {
+
+    width: fit-content;
+
+    margin: 0 auto 15px;
+
+    padding: 5px 24px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.10);
+
+    backdrop-filter: blur(10px);
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+.country-strip span {
+
+    color: #f47a00;
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+    margin: 0 8px;
+}
+
+/* =========================================================
+   COUNTER GRID
+========================================================= */
+.counter-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    align-items:center;
+
+    text-align:center;
+
+    margin-top:10px;
+    
+}
+.counter-item{
+
+    background:transparent;
+
+    border:none;
+
+    border-radius:0;
+
+    padding:10px 10px;
+
+    box-shadow:none;
+
+    backdrop-filter:none;
+
+    transition:.3s;
+}
+
+.counter-item:hover{
+
+    transform:translateY(-8px);
+
+    background:transparent;
+
+    box-shadow:none;
+}
+.counter-item h2{
+
+    font-size:40px;
+
+    font-weight:800;
+
+    color:#ffffff;
+
+    line-height:1;
+    margin-bottom:16px;
+}
+.counter-item h4{
+
+    color:#ffffff;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+    margin:0;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width:1200px){
+
+.about-grid{
+
+grid-template-columns:1fr;
+
+gap:50px;
+
+}
+
+.about-image{
+
+max-width:650px;
+
+margin:auto;
+
+}
+
+.counter-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.about-content h2{
+
+font-size:36px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.about-banner{
+
+min-height:220px;
+
+}
+
+.about-banner-content{
+
+padding:30px 0;
+
+}
+
+.about-banner h1{
+
+font-size:34px;
+
+}
+
+.about-company{
+
+padding:60px 0;
+
+}
+
+.about-grid{
+
+gap:35px;
+
+}
+
+.about-content{
+
+text-align:center;
+
+}
+
+.about-content h2{
+
+font-size:30px;
+
+}
+
+.about-content p{
+
+font-size:15px;
+
+line-height:1.8;
+
+}
+
+.about-full-content{
+
+margin-top:35px;
+
+padding-top:25px;
+
+}
+
+.country-strip{
+
+padding:12px 20px;
+
+font-size:15px;
+
+line-height:1.8;
+
+}
+
+.country-strip span{
+
+font-size:24px;
+
+}
+.counter-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:40px 25px;
+
+text-align:center;
+
+}
+
+.counter-item{
+
+padding:10px 0;
+
+}
+
+.counter-item h2{
+
+font-size:54px;
+
+}
+
+.counter-item h4{
+
+font-size:15px;
+
+line-height:1.5;
+
+letter-spacing:1px;
+
+}
+
+.country-strip{
+
+width:100%;
+
+border-radius:10px;
+
+padding:14px;
+
+font-size:15px;
+
+}
+}
+
+@media (max-width:480px){
+
+.about-banner{
+
+min-height:190px;
+
+}
+
+.about-banner-subtitle{
+
+font-size:13px;
+
+}
+
+.about-banner h1{
+
+font-size:28px;
+
+}
+
+.about-breadcrumb{
+
+font-size:14px;
+
+}
+
+.about-content h2{
+
+font-size:26px;
+
+}
+
+.about-content p{
+
+font-size:14px;
+
+}
+
+.section-tag{
+
+font-size:13px;
+
+padding:8px 15px;
+
+}
+
+.country-strip{
+
+font-size:14px;
+
+padding:12px 16px;
+
+}
+
+.country-strip span{
+
+font-size:22px;
+
+}
+
+.counter-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:35px 15px;
+
+}
+
+.counter-item h2{
+
+font-size:46px;
+
+}
+
+.counter-item h4{
+
+font-size:13px;
+
+line-height:1.4;
+
+letter-spacing:.5px;
+
+}
+
+.country-strip{
+
+font-size:14px;
+
+}
+
+}

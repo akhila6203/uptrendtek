@@ -1,0 +1,5984 @@
+/* =========================================================
+   UPTRENTEK SERVICE DETAIL PAGE
+========================================================= */
+
+.service-detail-page {
+  overflow: hidden;
+
+  color: #182238;
+
+  background: #ffffff;
+}
+
+.service-detail-page *,
+.service-detail-page *::before,
+.service-detail-page *::after {
+  box-sizing: border-box;
+}
+
+.service-detail-page img {
+  max-width: 100%;
+
+  vertical-align: middle;
+}
+
+.service-detail-page a {
+  text-decoration: none;
+}
+
+/* =========================================================
+   SERVICE BANNER
+========================================================= */
+
+.service-detail-banner {
+  position: relative;
+
+  min-height: 285px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  color: #ffffff;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.service-detail-banner::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 16% 28%,
+      rgba(244, 122, 0, 0.26),
+      transparent 32%
+    );
+}
+
+.service-detail-banner-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(70, 71, 74, 0.95) 0%,
+      rgba(47, 48, 51, 0.84) 52%,
+      rgba(65, 65, 68, 0.7) 100%
+    );
+}
+
+.service-detail-banner-content {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 42px 20px;
+
+  text-align: center;
+}
+
+.service-detail-banner-subtitle {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color:
+    var(--orange, #f47a00);
+
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  line-height: 1.2;
+}
+
+.service-detail-banner h1 {
+  margin: 0 0 15px;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(2.2rem, 4vw, 3rem);
+
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.service-detail-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  color:
+    rgba(255, 255, 255, 0.8);
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.service-detail-breadcrumb a {
+  color: #ffffff;
+
+  transition:
+    color 0.25s ease;
+}
+
+.service-detail-breadcrumb a:hover {
+  color:
+    var(--orange, #f47a00);
+}
+
+.service-detail-breadcrumb i {
+  color:
+    var(--orange, #f47a00);
+
+  font-size: 9px;
+}
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+.service-section {
+  padding: 70px 0;
+
+  background: #ffffff;
+}
+
+.service-section:nth-of-type(even) {
+  background: #f8faff;
+}
+
+.service-section-label {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 12px;
+
+  color:
+    var(--orange, #f47a00);
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  line-height: 1.2;
+}
+
+.service-section-label::before {
+  content: "";
+
+  width: 27px;
+  height: 2px;
+
+  border-radius: 20px;
+
+  background:
+    var(--orange, #f47a00);
+}
+
+.service-heading-line {
+  display: block;
+
+  width: 42px;
+  height: 3px;
+
+  margin: 14px 0 27px;
+
+  border-radius: 30px;
+
+  background:
+    var(--orange, #f47a00);
+}
+
+/* =========================================================
+   COMMON TYPOGRAPHY
+========================================================= */
+
+.service-overview-content h2,
+.service-wide-content h2,
+.service-challenges-content h2,
+.service-process-heading h2,
+.service-card-image-heading h2,
+.service-marketing-item h2 {
+  margin: 0 0 18px;
+
+  color: #111827;
+
+  font-size:
+    clamp(2rem, 3.3vw, 2.7rem);
+
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.service-overview-content h3,
+.service-uiux-item h3,
+.service-simple-card h3,
+.service-benefit-card h3,
+.service-platform-card h3 {
+  margin: 0 0 15px;
+
+  color: #111111;
+
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.service-overview-content p,
+.service-wide-content p,
+.service-challenges-content p,
+.service-uiux-item p,
+.service-simple-card p,
+.service-marketing-item p,
+.service-platform-card p,
+.service-card-image-heading p {
+  margin: 0 0 20px;
+
+  color: #667287;
+
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.service-wide-content {
+  max-width: 1080px;
+}
+
+.service-lead {
+  color: #46546b !important;
+
+  font-size: 18px !important;
+  font-weight: 600;
+  line-height: 1.75 !important;
+}
+
+.service-intro-text {
+  color: #667287;
+}
+
+.service-special-title {
+  margin: 25px 0 !important;
+
+  color: #111111;
+
+  font-size:
+    clamp(1.9rem, 3vw, 2.6rem);
+
+  line-height: 1.2;
+
+  text-align: center;
+}
+
+.service-highlight-box {
+  margin: 24px 0;
+  padding: 19px 22px;
+
+  border-radius: 0 10px 10px 0;
+
+  color: #c64f00;
+
+  background: #fff4e9;
+
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   OVERVIEW SECTION
+========================================================= */
+
+.service-overview-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  align-items: center;
+
+  gap: 60px;
+}
+
+.service-overview-grid.image-right
+.service-overview-content {
+  order: 1;
+}
+
+.service-overview-grid.image-right
+.service-overview-image {
+  order: 2;
+}
+
+.service-overview-grid.image-left
+.service-overview-image {
+  order: 1;
+}
+
+.service-overview-grid.image-left
+.service-overview-content {
+  order: 2;
+}
+
+.service-overview-image {
+  min-width: 0;
+}
+
+.service-overview-image img {
+  width: 100%;
+  height: 440px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 17px;
+
+  box-shadow:
+    0 22px 55px
+    rgba(15, 23, 42, 0.14);
+}
+
+/* =========================================================
+   TWO COLUMN LAYOUT
+========================================================= */
+
+.service-two-column-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(0, 0.95fr);
+
+  align-items: center;
+
+  gap: 52px;
+}
+
+.service-side-image {
+  min-width: 0;
+}
+
+.service-side-image img {
+  width: 100%;
+  height: 420px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 20px 50px
+    rgba(15, 23, 42, 0.13);
+}
+
+/* =========================================================
+   CHECK LIST
+========================================================= */
+
+.service-check-list {
+  display: grid;
+
+  gap: 12px;
+
+  margin: 22px 0 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.service-check-list li {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 11px;
+
+  color: #727a8e;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.service-check-list i {
+  flex-shrink: 0;
+
+  margin-top: 5px;
+
+  color: #0877f9;
+
+  font-size: 15px;
+}
+
+/* =========================================================
+   TWO IMAGE SECTION
+========================================================= */
+
+.service-two-images {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 25px;
+}
+
+.service-two-images > div {
+  overflow: hidden;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 18px 45px
+    rgba(15, 23, 42, 0.1);
+}
+
+.service-two-images img {
+  width: 100%;
+  height: 340px;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.service-two-images > div:hover img {
+  transform: scale(1.04);
+}
+
+/* =========================================================
+   FULL WIDTH IMAGE
+========================================================= */
+
+.service-full-image {
+  overflow: hidden;
+
+  border-radius: 17px;
+
+  box-shadow:
+    0 22px 55px
+    rgba(15, 23, 42, 0.13);
+}
+
+.service-full-image img {
+  width: 100%;
+  height: 440px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/* =========================================================
+   WEB DEVELOPMENT IMAGE CARDS
+========================================================= */
+
+.service-image-card-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 45px 30px;
+}
+
+.service-image-card {
+  min-width: 0;
+
+  text-align: center;
+}
+
+.service-image-card h3 {
+  margin: 0 0 18px;
+
+  color: #111111;
+
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.service-image-card-visual {
+  height: 290px;
+
+  overflow: hidden;
+
+  margin-bottom: 18px;
+
+  border: 1px solid #e8edf4;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 15px 40px
+    rgba(15, 23, 42, 0.08);
+}
+
+.service-image-card-visual img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.service-image-card:hover
+.service-image-card-visual img {
+  transform: scale(1.035);
+}
+
+.service-image-card p {
+  max-width: 520px;
+
+  margin: 0 auto;
+
+  color: #747c90;
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   MOBILE INTRO IMAGE
+========================================================= */
+
+.service-single-centered-image {
+  max-width: 780px;
+
+  margin: 0 auto 42px;
+
+  text-align: center;
+}
+
+.service-single-centered-image img {
+  width: 100%;
+  max-height: 500px;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+/* =========================================================
+   RICH POINTS
+========================================================= */
+
+.service-rich-points {
+  display: grid;
+
+  gap: 13px;
+
+  margin: 22px 0 0;
+  padding-left: 22px;
+}
+
+.service-rich-points li {
+  color: #657187;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.service-rich-points strong {
+  margin-right: 4px;
+
+  color: #526078;
+}
+
+/* =========================================================
+   PROCESS SECTION
+========================================================= */
+
+.service-process-heading {
+  margin-bottom: 25px;
+}
+
+.service-process-image {
+  max-width: 850px;
+
+  margin: auto;
+
+  text-align: center;
+}
+
+.service-process-image img {
+  width: 100%;
+  max-height: 520px;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+/* =========================================================
+   MOBILE PLATFORM SERVICES
+========================================================= */
+
+.service-platform-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  align-items: start;
+
+  gap: 65px 48px;
+}
+
+.service-platform-card {
+  min-width: 0;
+}
+
+.service-platform-card > h2 {
+  margin: 0 0 22px;
+
+  color: #111111;
+
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.service-platform-card > h3 {
+  margin: 28px 0 15px;
+
+  font-size: 21px;
+}
+
+.service-platform-card > h4,
+.service-platform-content-block h4 {
+  margin: 24px 0 10px;
+
+  color: #536077;
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.service-platform-image {
+  min-height: 320px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 25px;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+}
+
+.service-platform-image img {
+  width: 100%;
+  height: 320px;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+.service-platform-content-block {
+  margin-top: 24px;
+}
+
+.service-bullet-list {
+  display: grid;
+
+  gap: 11px;
+
+  margin: 18px 0;
+  padding-left: 20px;
+
+  color: #667287;
+}
+
+.service-bullet-list li {
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   SIMPLE TEXT CARD GRID
+========================================================= */
+
+.service-text-card-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 28px;
+
+  margin-top: 38px;
+}
+
+.service-simple-card {
+  padding: 26px;
+
+  border: 1px solid #e8edf4;
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 15px 40px
+    rgba(15, 23, 42, 0.07);
+}
+
+.service-simple-card h3 {
+  font-size: 23px;
+}
+
+.service-simple-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   UI UX GRID
+========================================================= */
+
+.service-uiux-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  align-items: start;
+
+  gap: 45px 65px;
+}
+
+.service-uiux-item h3 {
+  font-size: 25px;
+}
+
+.service-uiux-item p {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   DIGITAL MARKETING
+========================================================= */
+
+.service-marketing-list {
+  display: grid;
+
+  gap: 55px;
+}
+
+.service-marketing-item h2 {
+  margin-bottom: 16px;
+
+  font-size: 28px;
+}
+
+.service-marketing-item p {
+  max-width: 1080px;
+
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   CERTIFIED / QUICK RESPONSE SECTION
+========================================================= */
+
+.service-card-image-heading {
+  max-width: 1050px;
+
+  margin-bottom: 35px;
+}
+
+.service-card-image-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(0, 0.95fr);
+
+  align-items: stretch;
+
+  gap: 32px;
+}
+
+.service-benefit-cards {
+  display: grid;
+
+  gap: 20px;
+}
+
+.service-benefit-card {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 18px;
+
+  padding: 26px;
+
+  border: 1px solid #e8edf4;
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 16px 42px
+    rgba(15, 23, 42, 0.08);
+}
+
+.service-benefit-icon {
+  width: 68px;
+  height: 68px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color:
+    var(--orange, #f47a00);
+
+  background:
+    linear-gradient(
+      135deg,
+      #edf3ff,
+      #fff0f0
+    );
+
+  font-size: 24px;
+}
+
+.service-benefit-card h3 {
+  margin-top: 3px;
+
+  font-size: 20px;
+}
+
+.service-benefit-card p {
+  margin: 0;
+
+  color: #727b8e;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.service-benefit-image {
+  overflow: hidden;
+
+  border-radius: 15px;
+}
+
+.service-benefit-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 370px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/* =========================================================
+   CLOSING SECTION
+========================================================= */
+
+.service-closing-section {
+  padding-top: 40px;
+  padding-bottom: 65px;
+}
+
+.service-closing-section
+.service-wide-content {
+  max-width: 1100px;
+}
+
+.service-closing-section p {
+  margin-bottom: 0;
+
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
+
+.service-contact-section {
+  padding: 75px 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eef3fa,
+      #f9fbfd
+    );
+}
+
+.service-contact-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.1fr);
+
+  align-items: stretch;
+
+  gap: 35px;
+}
+
+.service-contact-visual {
+  position: relative;
+
+  min-height: 570px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: #1f2b44;
+
+  box-shadow:
+    0 22px 55px
+    rgba(15, 23, 42, 0.16);
+}
+
+.service-contact-visual > img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.service-contact-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(15, 23, 42, 0.12),
+      rgba(15, 23, 42, 0.92)
+    );
+}
+
+.service-contact-visual-content {
+  position: absolute;
+  z-index: 2;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 38px 32px;
+}
+
+.service-contact-visual-content > span {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color:
+    var(--orange-light, #ff982e);
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.service-contact-visual-content h2 {
+  margin: 0 0 13px;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(1.8rem, 3vw, 2.35rem);
+
+  line-height: 1.2;
+}
+
+.service-contact-visual-content > p {
+  margin: 0 0 22px;
+
+  color:
+    rgba(255, 255, 255, 0.78);
+
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.service-contact-details {
+  display: grid;
+
+  gap: 13px;
+}
+
+.service-contact-details a {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  color: #ffffff;
+}
+
+.service-contact-details a > i {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  background:
+    var(--orange, #f47a00);
+}
+
+.service-contact-details small {
+  display: block;
+
+  color:
+    rgba(255, 255, 255, 0.65);
+
+  font-size: 11px;
+}
+
+.service-contact-details strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+.service-contact-form-card {
+  padding: 36px;
+
+  border: 1px solid #e4e9f0;
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 22px 55px
+    rgba(15, 23, 42, 0.1);
+}
+
+.service-contact-form-heading {
+  margin-bottom: 23px;
+}
+
+.service-contact-form-heading h2 {
+  margin: 0 0 10px;
+
+  color: #111827;
+
+  font-size:
+    clamp(1.9rem, 3vw, 2.4rem);
+}
+
+.service-contact-form-heading p {
+  margin: 0;
+
+  color: #717b8e;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.service-form-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 3px 16px;
+}
+
+.service-form-group {
+  min-width: 0;
+
+  margin-bottom: 10px;
+}
+
+.service-full-field {
+  grid-column: 1 / -1;
+}
+
+.service-form-group label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #27334a;
+
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.service-form-group label span {
+  color:
+    var(--orange, #f47a00);
+}
+
+.service-input-wrapper {
+  position: relative;
+}
+
+.service-input-wrapper input,
+.service-input-wrapper textarea {
+  width: 100%;
+
+  border: 1px solid #dfe5ed;
+  border-radius: 8px;
+
+  color: #27334a;
+
+  background: #f9fbfd;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.service-input-wrapper input {
+  height: 48px;
+
+  padding:
+    9px 42px
+    9px 14px;
+}
+
+.service-input-wrapper textarea {
+  min-height: 120px;
+
+  padding:
+    14px 42px
+    14px 14px;
+
+  resize: vertical;
+}
+
+.service-input-wrapper > i {
+  position: absolute;
+
+  top: 50%;
+  right: 14px;
+
+  color: #8a93a4;
+
+  font-size: 13px;
+
+  transform: translateY(-50%);
+
+  pointer-events: none;
+}
+
+.textarea-wrapper > i {
+  top: 17px;
+
+  transform: none;
+}
+
+.service-input-wrapper input:focus,
+.service-input-wrapper textarea:focus {
+  outline: none;
+
+  border-color:
+    var(--orange, #f47a00);
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(244, 122, 0, 0.1);
+}
+
+.service-form-group.is-invalid input,
+.service-form-group.is-invalid textarea {
+  border-color: #dc2626;
+
+  background: #fffafa;
+}
+
+.service-form-error {
+  display: block;
+
+  min-height: 16px;
+
+  padding-top: 3px;
+
+  color: #dc2626;
+
+  font-size: 10px;
+}
+
+.service-submit-button {
+  min-width: 165px;
+  min-height: 48px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 11px 22px;
+
+  border: 0;
+  border-radius: 8px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--orange, #f47a00),
+      var(--orange-light, #ff982e)
+    );
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 13px 28px
+    rgba(244, 122, 0, 0.23);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.service-submit-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 16px 32px
+    rgba(244, 122, 0, 0.3);
+}
+
+.service-submit-button:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.7;
+
+  transform: none;
+}
+
+.service-form-status {
+  display: none;
+
+  margin-top: 14px;
+  padding: 11px 13px;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+}
+
+.service-form-status.success {
+  display: block;
+
+  color: #166534;
+
+  border: 1px solid #bbf7d0;
+
+  background: #dcfce7;
+}
+
+.service-form-status.error {
+  display: block;
+
+  color: #b91c1c;
+
+  border: 1px solid #fecaca;
+
+  background: #fee2e2;
+}
+
+/* =========================================================
+   IMAGE ERROR
+========================================================= */
+
+.image-error {
+  min-height: 220px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f3f5f8,
+      #e8edf4
+    );
+}
+
+.image-error::after {
+  content: "Image not found";
+
+  color: #7a8495;
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+.reveal {
+  opacity: 0;
+
+  transform: translateY(24px);
+
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+/* =========================================================
+   SERVICE NOT FOUND
+========================================================= */
+
+.service-not-found {
+  min-height: 60vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 80px 0;
+
+  text-align: center;
+}
+
+.service-not-found h1 {
+  margin: 0 0 15px;
+
+  color: #111827;
+
+  font-size: 42px;
+}
+
+.service-not-found p {
+  margin: 0 0 25px;
+
+  color: #677287;
+}
+
+.service-primary-button {
+  min-height: 48px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 12px 23px;
+
+  border-radius: 8px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--orange, #f47a00),
+      var(--orange-light, #ff982e)
+    );
+
+  font-size: 14px;
+  font-weight: 800;
+
+  box-shadow:
+    0 12px 28px
+    rgba(244, 122, 0, 0.23);
+}
+
+/* =========================================================
+   LARGE LAPTOP
+========================================================= */
+
+@media (max-width: 1150px) {
+  .service-overview-grid {
+    gap: 42px;
+  }
+
+  .service-two-column-layout {
+    gap: 38px;
+  }
+
+  .service-card-image-layout {
+    gap: 26px;
+  }
+
+  .service-platform-grid {
+    gap: 55px 35px;
+  }
+
+  .service-overview-image img {
+    height: 410px;
+  }
+
+  .service-side-image img {
+    height: 390px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .service-overview-grid,
+  .service-two-column-layout,
+  .service-card-image-layout,
+  .service-contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .service-overview-grid.image-right
+  .service-overview-content {
+    order: 2;
+  }
+
+  .service-overview-grid.image-right
+  .service-overview-image {
+    order: 1;
+  }
+
+  .service-overview-image,
+  .service-side-image,
+  .service-benefit-image {
+    width: 100%;
+    max-width: 720px;
+
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .service-platform-grid,
+  .service-uiux-grid,
+  .service-text-card-grid,
+  .service-two-images,
+  .service-image-card-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .service-contact-visual {
+    min-height: 500px;
+  }
+
+  .service-benefit-image img {
+    min-height: 340px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .service-detail-banner {
+    min-height: 215px;
+  }
+
+  .service-detail-banner-content {
+    padding: 32px 15px;
+  }
+
+  .service-detail-banner h1 {
+    font-size: 31px;
+  }
+
+  .service-detail-breadcrumb {
+    gap: 8px;
+
+    font-size: 12px;
+  }
+
+  .service-section {
+    padding: 52px 0;
+  }
+
+  .service-overview-grid,
+  .service-two-column-layout {
+    gap: 36px;
+  }
+
+  .service-overview-content h2,
+  .service-wide-content h2,
+  .service-challenges-content h2,
+  .service-process-heading h2,
+  .service-card-image-heading h2,
+  .service-marketing-item h2 {
+    font-size: 28px;
+  }
+
+  .service-overview-content p,
+  .service-wide-content p,
+  .service-challenges-content p,
+  .service-uiux-item p,
+  .service-simple-card p,
+  .service-marketing-item p,
+  .service-platform-card p,
+  .service-card-image-heading p {
+    font-size: 14px;
+  }
+
+  .service-lead {
+    font-size: 16px !important;
+  }
+
+  .service-special-title {
+    font-size: 27px;
+  }
+
+  .service-overview-image img,
+  .service-side-image img,
+  .service-full-image img {
+    height: 300px;
+  }
+
+  .service-platform-grid,
+  .service-uiux-grid,
+  .service-text-card-grid,
+  .service-two-images,
+  .service-image-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-two-images img {
+    height: 280px;
+  }
+
+  .service-image-card-visual {
+    height: 250px;
+  }
+
+  .service-platform-image {
+    min-height: 270px;
+  }
+
+  .service-platform-image img {
+    height: 270px;
+  }
+
+  .service-benefit-image img {
+    min-height: 300px;
+  }
+
+  .service-contact-section {
+    padding: 55px 0;
+  }
+
+  .service-contact-visual {
+    min-height: 440px;
+  }
+
+  .service-contact-form-card {
+    padding: 27px 22px;
+  }
+
+  .service-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-full-field {
+    grid-column: auto;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .service-detail-banner {
+    min-height: 190px;
+  }
+
+  .service-detail-banner-subtitle {
+    font-size: 11px;
+  }
+
+  .service-detail-banner h1 {
+    font-size: 26px;
+  }
+
+  .service-section {
+    padding: 44px 0;
+  }
+
+  .service-overview-content h2,
+  .service-wide-content h2,
+  .service-challenges-content h2,
+  .service-process-heading h2,
+  .service-card-image-heading h2,
+  .service-marketing-item h2 {
+    font-size: 25px;
+  }
+
+  .service-special-title {
+    font-size: 24px;
+  }
+
+  .service-highlight-box {
+    padding: 16px;
+
+    font-size: 13px;
+  }
+
+  .service-overview-image img,
+  .service-side-image img,
+  .service-full-image img {
+    height: 235px;
+  }
+
+  .service-two-images img {
+    height: 225px;
+  }
+
+  .service-image-card h3 {
+    font-size: 21px;
+  }
+
+  .service-image-card-visual {
+    height: 215px;
+  }
+
+  .service-platform-card > h2 {
+    font-size: 22px;
+  }
+
+  .service-platform-image {
+    min-height: 225px;
+  }
+
+  .service-platform-image img {
+    height: 225px;
+  }
+
+  .service-simple-card,
+  .service-benefit-card {
+    padding: 21px;
+  }
+
+  .service-benefit-icon {
+    width: 56px;
+    height: 56px;
+
+    font-size: 20px;
+  }
+
+  .service-benefit-card {
+    gap: 14px;
+  }
+
+  .service-benefit-card h3 {
+    font-size: 18px;
+  }
+
+  .service-contact-visual {
+    min-height: 405px;
+  }
+
+  .service-contact-visual-content {
+    padding: 27px 21px;
+  }
+
+  .service-contact-form-card {
+    padding: 24px 18px;
+  }
+
+  .service-submit-button {
+    width: 100%;
+  }
+}
+
+
+
+
+/* =========================================================
+   APPLICATION DEVELOPMENT CUSTOM DESIGN
+========================================================= */
+
+/* Every normal application section should remain white */
+
+body[data-service="application-development"]
+.service-section {
+  background: #ffffff !important;
+}
+
+/* Intro highlight:
+   remove orange vertical line and colored background */
+
+body[data-service="application-development"]
+.service-highlight-box {
+  margin: 18px 0 24px;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 0;
+
+  background: transparent;
+
+  color: #f0523a;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+/* Remove line before APPLICATION MODERNIZATION */
+
+body[data-service="application-development"]
+.service-challenges-section
+.service-section-label::before {
+  display: none;
+}
+
+body[data-service="application-development"]
+.service-challenges-section
+.service-section-label {
+  gap: 0;
+
+  margin-bottom: 14px;
+}
+
+/* Decrease modernization heading size */
+
+body[data-service="application-development"]
+.service-challenges-content h2 {
+  max-width: 760px;
+
+  margin-bottom: 22px;
+
+  font-size:
+    clamp(1.8rem, 2.7vw, 2.35rem);
+
+  line-height: 1.28;
+}
+
+/* Remove orange bottom heading line */
+
+body[data-service="application-development"]
+.service-challenges-section
+.service-heading-line {
+  display: none;
+}
+
+/* Application challenges columns */
+
+body[data-service="application-development"]
+.service-challenges-section
+.service-two-column-layout {
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(340px, 0.85fr);
+
+  align-items: center;
+
+  gap: 55px;
+}
+
+/* =========================================================
+   MIGRATION SECTION
+========================================================= */
+
+.application-modernization-section {
+  padding-top: 65px;
+  padding-bottom: 70px;
+
+  background: #ffffff !important;
+}
+
+.application-modernization-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.08fr)
+    minmax(360px, 0.92fr);
+
+  align-items: stretch;
+
+  gap: 42px;
+}
+
+/* Left column */
+
+.application-modernization-content {
+  min-width: 0;
+}
+
+.application-modernization-content > h2 {
+  max-width: 720px;
+
+  margin: 0 0 15px;
+
+  color: #111827;
+
+  font-size:
+    clamp(1.9rem, 2.8vw, 2.45rem);
+
+  font-weight: 800;
+  line-height: 1.24;
+}
+
+.application-modernization-content > p {
+  margin: 0 0 25px;
+
+  color: #667287;
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Boxes on left */
+
+.application-modernization-cards {
+  display: grid;
+
+  gap: 18px;
+}
+
+.application-benefit-card {
+  min-height: 145px;
+
+  align-items: center;
+
+  padding: 22px 24px;
+
+  border: 1px solid #e7ecf3;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 14px 35px
+    rgba(15, 23, 42, 0.07);
+}
+
+.application-benefit-card
+.service-benefit-icon {
+  width: 62px;
+  height: 62px;
+
+  font-size: 22px;
+}
+
+.application-benefit-card h3 {
+  margin: 0 0 7px;
+
+  color: #111111;
+
+  font-size: 19px;
+}
+
+.application-benefit-card p {
+  margin: 0;
+
+  color: #727b8e;
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* Closing paragraph inside left side */
+
+.application-modernization-closing {
+  margin-top: 25px;
+  padding-top: 22px;
+
+  border-top: 1px solid #e6ebf2;
+}
+
+.application-modernization-closing p {
+  margin: 0;
+
+  color: #667287;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Right image */
+
+.application-modernization-image {
+  min-width: 0;
+
+  overflow: hidden;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 18px 45px
+    rgba(15, 23, 42, 0.11);
+}
+
+.application-modernization-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 490px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+body[data-service="application-development"]
+.service-challenges-content h2 {
+  font-size: clamp(1.55rem, 2vw, 1.9rem);
+  line-height: 1.28;
+}
+
+
+/* =========================================================
+   SOFTWARE DEVELOPMENT CUSTOM DESIGN
+========================================================= */
+
+/* Remove all alternate section backgrounds */
+
+body[data-service="software-development"]
+.service-section {
+  background: #ffffff !important;
+}
+
+/* =========================================================
+   FIRST SECTION
+========================================================= */
+
+/* Give more space to the image side */
+
+body[data-service="software-development"]
+.service-overview-grid {
+  grid-template-columns:
+    minmax(0, 0.92fr)
+    minmax(0, 1.08fr);
+
+  align-items: center;
+
+  gap: 55px;
+}
+
+/* Increase first section image size */
+
+body[data-service="software-development"]
+.service-overview-image img {
+  width: 100%;
+  height: 520px;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 17px;
+}
+
+/* Keep heading moderate */
+
+body[data-service="software-development"]
+.service-overview-content h2 {
+  font-size:
+    clamp(2rem, 2.8vw, 2.55rem);
+
+  line-height: 1.2;
+}
+
+/* Remove highlight background and orange side line */
+
+body[data-service="software-development"]
+.service-highlight-box {
+  margin: 20px 0 25px;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 0;
+
+  background: transparent;
+
+  color: #d85a00;
+
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   AGENCY VALUES SECTION
+========================================================= */
+
+.software-agency-values-section {
+  padding-top: 65px;
+  padding-bottom: 70px;
+
+  background: #ffffff !important;
+}
+
+.software-agency-values-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.95fr)
+    minmax(0, 1.05fr);
+
+  align-items: center;
+
+  gap: 55px;
+}
+
+/* Left image */
+
+.software-agency-values-image {
+  min-width: 0;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 18px 45px
+    rgba(15, 23, 42, 0.11);
+}
+
+.software-agency-values-image img {
+  width: 100%;
+  height: 440px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Right content */
+
+.software-agency-values-content {
+  min-width: 0;
+}
+
+.software-agency-values-content h2 {
+  margin: 0 0 24px;
+
+  color: #111827;
+
+  font-size:
+    clamp(1.9rem, 2.7vw, 2.4rem);
+
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.software-agency-values-content > p {
+  margin: 0 0 20px;
+
+  color: #667287;
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.software-agency-values-content
+.service-check-list {
+  margin-top: 10px;
+}
+
+.software-agency-values-content
+.service-check-list li {
+  padding: 5px 0;
+
+  font-size: 16px;
+}
+
+/* Remove heading orange bottom line if it is rendering elsewhere */
+
+body[data-service="software-development"]
+.software-agency-values-section
+.service-heading-line {
+  display: none;
+}
+
+/* =========================================================
+   HUMAN-CENTRIC SECTION
+========================================================= */
+
+.software-human-centric-section {
+  padding-top: 70px;
+  padding-bottom: 75px;
+
+  background: #ffffff !important;
+}
+
+.software-human-centric-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.08fr)
+    minmax(360px, 0.92fr);
+
+  align-items: stretch;
+
+  gap: 42px;
+}
+
+/* Left content */
+
+.software-human-centric-content {
+  min-width: 0;
+}
+
+.software-human-centric-content > h2 {
+  max-width: 760px;
+
+  margin: 0 0 18px;
+
+  color: #111827;
+
+  font-size:
+    clamp(1.9rem, 2.8vw, 2.45rem);
+
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.software-human-centric-content > p {
+  margin: 0 0 27px;
+
+  color: #667287;
+
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+/* Benefit boxes */
+
+.software-human-centric-cards {
+  display: grid;
+
+  gap: 18px;
+}
+
+.software-benefit-card {
+  min-height: 145px;
+
+  align-items: center;
+
+  padding: 23px 25px;
+
+  border: 1px solid #e6ebf2;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 14px 36px
+    rgba(15, 23, 42, 0.07);
+}
+
+.software-benefit-card
+.service-benefit-icon {
+  width: 62px;
+  height: 62px;
+
+  font-size: 22px;
+}
+
+.software-benefit-card h3 {
+  margin: 0 0 8px;
+
+  color: #111111;
+
+  font-size: 19px;
+}
+
+.software-benefit-card p {
+  margin: 0;
+
+  color: #727b8e;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Closing paragraph inside left column */
+
+.software-human-centric-closing {
+  margin-top: 25px;
+  padding-top: 22px;
+
+  border-top: 1px solid #e4e9f0;
+}
+
+.software-human-centric-closing p {
+  margin: 0;
+
+  color: #667287;
+
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* Right image */
+
+.software-human-centric-image {
+  min-width: 0;
+
+  overflow: hidden;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 18px 45px
+    rgba(15, 23, 42, 0.11);
+}
+
+.software-human-centric-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 545px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+/* =========================================================
+   WEB DEVELOPMENT CUSTOM DESIGN
+========================================================= */
+
+/* Remove alternating/light backgrounds */
+
+body[data-service="web-development"]
+.service-section {
+  background: #ffffff !important;
+}
+
+/* Remove intro highlight background if present */
+
+body[data-service="web-development"]
+.service-highlight-box {
+  margin: 18px 0 24px;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 0;
+
+  background: transparent;
+
+  color: #d85a00;
+
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   WEB SERVICE IMAGE CARDS
+========================================================= */
+
+.web-development-cards-section {
+  padding-top: 65px;
+  padding-bottom: 70px;
+
+  background: #ffffff !important;
+}
+
+.web-development-card-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  align-items: start;
+
+  gap: 55px 38px;
+}
+
+.web-development-card {
+  min-width: 0;
+
+  text-align: center;
+}
+
+.web-development-card h3 {
+  margin: 0 0 18px;
+
+  color: #111111;
+
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+/*
+  Fixed height, white box, left/right blank spaces remove.
+*/
+
+.web-development-card-image {
+  width: 100%;
+
+  margin: 0 0 18px;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  border: 0;
+  border-radius: 12px;
+
+  background: transparent;
+
+  box-shadow: none;
+}
+
+.web-development-card-image img {
+  width: 100%;
+  height:400px;
+
+  display: block;
+
+  object-fit: unset;
+  object-position: center;
+
+  border-radius: 12px;
+}
+
+/*
+  Paragraph alignment and width
+*/
+
+.web-development-card > p {
+  max-width: 640px;
+
+  margin: 0 auto;
+
+  color: #747c90;
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Remove old image card box styles only on Web Development */
+
+body[data-service="web-development"]
+.service-image-card-visual {
+  height: auto;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 12px;
+
+  background: transparent;
+
+  box-shadow: none;
+}
+
+body[data-service="web-development"]
+.service-image-card-visual img {
+  width: 100%;
+  height: auto;
+
+  object-fit: unset;
+}
+
+/* =========================================================
+   WEB DEVELOPMENT EXPERTISE
+========================================================= */
+
+.web-development-expertise-section {
+  padding-top: 70px;
+  padding-bottom: 75px;
+
+  background: #ffffff !important;
+}
+
+.web-development-expertise-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.08fr)
+    minmax(360px, 0.92fr);
+
+  align-items: stretch;
+
+  gap: 42px;
+}
+
+/* Left content */
+
+.web-development-expertise-content {
+  min-width: 0;
+}
+
+.web-development-expertise-content > h2 {
+  max-width: 750px;
+
+  margin: 0 0 18px;
+
+  color: #111827;
+
+  font-size:
+    clamp(1.9rem, 2.8vw, 2.45rem);
+
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.web-development-expertise-content > p {
+  margin: 0 0 27px;
+
+  color: #667287;
+
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+/* No orange heading line */
+
+body[data-service="web-development"]
+.web-development-expertise-section
+.service-heading-line {
+  display: none;
+}
+
+/* Certified Experts / Quick Response cards */
+
+.web-development-benefit-cards {
+  display: grid;
+
+  gap: 18px;
+}
+
+.web-development-benefit-card {
+  min-height: 145px;
+
+  align-items: center;
+
+  padding: 23px 25px;
+
+  border: 1px solid #e6ebf2;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 14px 36px
+    rgba(15, 23, 42, 0.07);
+}
+
+.web-development-benefit-card
+.service-benefit-icon {
+  width: 62px;
+  height: 62px;
+
+  font-size: 22px;
+}
+
+.web-development-benefit-card h3 {
+  margin: 0 0 8px;
+
+  color: #111111;
+
+  font-size: 19px;
+}
+
+.web-development-benefit-card p {
+  margin: 0;
+
+  color: #727b8e;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Closing paragraph inside left side */
+
+.web-development-closing {
+  margin-top: 25px;
+  padding-top: 22px;
+
+  border-top: 1px solid #e4e9f0;
+}
+
+.web-development-closing p {
+  margin: 0;
+
+  color: #667287;
+
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* Right image */
+
+.web-development-expertise-image {
+  min-width: 0;
+
+  overflow: hidden;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 18px 45px
+    rgba(15, 23, 42, 0.11);
+}
+
+.web-development-expertise-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 545px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 15px;
+}
+/* =========================================================
+   MOBILE APP DEVELOPMENT CUSTOM DESIGN
+========================================================= */
+
+/* Remove all alternate backgrounds */
+
+body[data-service="mobile-application-development"]
+.service-section {
+  background: #ffffff !important;
+}
+
+/* =========================================================
+   FIRST SECTION
+========================================================= */
+
+body[data-service="mobile-application-development"]
+.service-overview-grid {
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 52px;
+}
+
+body[data-service="mobile-application-development"]
+.service-overview-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 18px 45px
+    rgba(15, 23, 42, 0.08);
+}
+
+body[data-service="mobile-application-development"]
+.service-overview-image img {
+  width: 92%;
+  height: 440px;
+
+  display: block;
+
+  object-fit: contain;
+
+  border-radius: 0;
+
+  box-shadow: none;
+}
+
+body[data-service="mobile-application-development"]
+.service-overview-content h2 {
+  font-size:
+    clamp(2rem, 2.8vw, 2.5rem);
+}
+
+body[data-service="mobile-application-development"]
+.service-special-title {
+  margin: 24px 0;
+
+  font-size:
+    clamp(1.8rem, 2.7vw, 2.35rem);
+
+  line-height: 1.3;
+}
+
+/* Remove highlight background and orange line */
+
+body[data-service="mobile-application-development"]
+.service-highlight-box {
+  margin: 20px 0 24px;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 0;
+
+  background: transparent;
+
+  color: #f0523a;
+
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   FULL WIDTH INTRO TEXT
+========================================================= */
+
+.mobile-intro-text-section {
+  padding-top: 18px;
+  padding-bottom: 60px;
+
+  background: #ffffff !important;
+}
+
+.mobile-intro-text-content {
+  width: 100%;
+}
+
+.mobile-intro-text-content p {
+  width: 100%;
+
+  margin: 0 0 22px;
+
+  color: #667287;
+
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.mobile-intro-text-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   ROI LEFT + PROCESS IMAGE RIGHT
+========================================================= */
+
+.mobile-roi-section {
+  padding-top: 65px;
+  padding-bottom: 70px;
+
+  background: #ffffff !important;
+}
+
+.mobile-roi-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 55px;
+}
+
+.mobile-roi-content > h2 {
+  margin: 0 0 25px;
+
+  color: #111827;
+
+  font-size:
+    clamp(1.9rem, 2.8vw, 2.4rem);
+
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.mobile-roi-content
+.service-rich-points {
+  display: grid;
+
+  gap: 15px;
+
+  margin: 0;
+  padding-left: 21px;
+}
+
+.mobile-roi-content
+.service-rich-points li {
+  color: #667287;
+
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.mobile-roi-content
+.service-rich-points strong {
+  color: #45536a;
+}
+
+.mobile-roi-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 18px 45px
+    rgba(15, 23, 42, 0.08);
+}
+
+.mobile-roi-image img {
+  width: 100%;
+  max-height: 430px;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+/* =========================================================
+   PLATFORM SERVICES
+========================================================= */
+
+.mobile-platforms-section {
+  padding-top: 70px;
+  padding-bottom: 75px;
+
+  background: #ffffff !important;
+}
+
+.mobile-platforms-list {
+  display: block;
+}
+
+.mobile-platform-row {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  align-items: center;
+
+  gap: 55px;
+
+  padding: 65px 0;
+
+  border-bottom: 1px solid #e6ebf2;
+}
+
+.mobile-platform-row:first-child {
+  padding-top: 0;
+}
+
+.mobile-platform-row:last-child {
+  padding-bottom: 0;
+
+  border-bottom: 0;
+}
+
+.mobile-platform-content {
+  min-width: 0;
+}
+
+.mobile-platform-content > h2 {
+  margin: 0 0 22px;
+
+  color: #111111;
+
+  font-size:
+    clamp(1.75rem, 2.4vw, 2.2rem);
+
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.mobile-platform-content > h3,
+.mobile-platform-extra-content h3 {
+  margin: 28px 0 14px;
+
+  color: #111111;
+
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.mobile-platform-content > h4 {
+  margin: 27px 0 12px;
+
+  color: #4d5b72;
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.mobile-platform-content p,
+.mobile-platform-extra-content p {
+  margin: 0 0 20px;
+
+  color: #667287;
+
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.mobile-platform-content
+.service-bullet-list,
+.mobile-platform-extra-content
+.service-bullet-list {
+  display: grid;
+
+  gap: 11px;
+
+  margin: 17px 0 0;
+  padding-left: 21px;
+
+  color: #667287;
+}
+
+.mobile-platform-content
+.service-bullet-list li,
+.mobile-platform-extra-content
+.service-bullet-list li {
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.mobile-platform-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 16px 42px
+    rgba(15, 23, 42, 0.08);
+}
+
+.mobile-platform-image img {
+  width: 100%;
+  max-height: 480px;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+/* =========================================================
+   FINAL SECTION
+========================================================= */
+
+.mobile-expertise-section {
+  padding-top: 70px;
+  padding-bottom: 75px;
+
+  background: #ffffff !important;
+}
+
+.mobile-expertise-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(0, 0.95fr);
+
+  align-items: stretch;
+
+  gap: 45px;
+}
+
+.mobile-expertise-content > h2 {
+  margin: 0 0 22px;
+
+  color: #111827;
+
+  font-size:
+    clamp(1.9rem, 2.8vw, 2.4rem);
+
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.mobile-expertise-content > p {
+  margin: 0 0 25px;
+
+  color: #667287;
+
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.mobile-expertise-cards {
+  display: grid;
+
+  gap: 18px;
+}
+
+.mobile-expertise-card {
+  min-height: 145px;
+
+  align-items: center;
+
+  padding: 23px 25px;
+
+  border: 1px solid #e6ebf2;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 14px 36px
+    rgba(15, 23, 42, 0.07);
+}
+
+.mobile-expertise-card
+.service-benefit-icon {
+  width: 62px;
+  height: 62px;
+
+  font-size: 22px;
+}
+
+.mobile-expertise-card h3 {
+  margin: 0 0 8px;
+
+  color: #111111;
+
+  font-size: 19px;
+}
+
+.mobile-expertise-card p {
+  margin: 0;
+
+  color: #727b8e;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.mobile-expertise-closing {
+  margin-top: 25px;
+  padding-top: 22px;
+
+  border-top: 1px solid #e4e9f0;
+}
+
+.mobile-expertise-closing p {
+  margin: 0;
+
+  color: #667287;
+
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.mobile-expertise-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 22px;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 18px 45px
+    rgba(15, 23, 42, 0.09);
+}
+
+.mobile-expertise-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 470px;
+
+  display: block;
+
+  object-fit: contain;
+}
+@media (max-width: 900px) {
+  body[data-service="mobile-application-development"]
+  .service-overview-grid,
+  .mobile-roi-layout,
+  .mobile-platform-row,
+  .mobile-expertise-layout {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-service="mobile-application-development"]
+  .service-overview-grid.image-right
+  .service-overview-image {
+    order: 1;
+  }
+
+  body[data-service="mobile-application-development"]
+  .service-overview-grid.image-right
+  .service-overview-content {
+    order: 2;
+  }
+
+  .mobile-platform-row
+  .mobile-platform-image {
+    order: 1;
+  }
+
+  .mobile-platform-row
+  .mobile-platform-content {
+    order: 2;
+  }
+
+  body[data-service="mobile-application-development"]
+  .service-overview-image,
+  .mobile-roi-image,
+  .mobile-platform-image,
+  .mobile-expertise-image {
+    width: 100%;
+    max-width: 740px;
+
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  body[data-service="mobile-application-development"]
+  .service-overview-image img {
+    height: 410px;
+  }
+
+  .mobile-roi-image img {
+    max-height: 380px;
+  }
+
+  .mobile-platform-row {
+    gap: 32px;
+
+    padding: 55px 0;
+  }
+
+  .mobile-expertise-image img {
+    height: 420px;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  body[data-service="mobile-application-development"]
+  .service-overview-image img {
+    width: 100%;
+    height: 325px;
+  }
+
+  body[data-service="mobile-application-development"]
+  .service-special-title {
+    font-size: 27px;
+  }
+
+  .mobile-intro-text-content p {
+    font-size: 14px;
+  }
+
+  .mobile-roi-section,
+  .mobile-platforms-section,
+  .mobile-expertise-section {
+    padding-top: 52px;
+    padding-bottom: 55px;
+  }
+
+  .mobile-roi-content > h2,
+  .mobile-expertise-content > h2 {
+    font-size: 27px;
+  }
+
+  .mobile-roi-image img {
+    max-height: 310px;
+  }
+
+  .mobile-platform-content > h2 {
+    font-size: 25px;
+  }
+
+  .mobile-platform-content p,
+  .mobile-platform-extra-content p,
+  .mobile-platform-content
+  .service-bullet-list li {
+    font-size: 14px;
+  }
+
+  .mobile-platform-image img {
+    max-height: 340px;
+  }
+
+  .mobile-expertise-image img {
+    height: 340px;
+  }
+}
+
+@media (max-width: 480px) {
+  body[data-service="mobile-application-development"]
+  .service-overview-image img {
+    height: 245px;
+  }
+
+  body[data-service="mobile-application-development"]
+  .service-special-title {
+    font-size: 24px;
+  }
+
+  .mobile-roi-content > h2,
+  .mobile-expertise-content > h2 {
+    font-size: 24px;
+  }
+
+  .mobile-roi-image img {
+    max-height: 245px;
+  }
+
+  .mobile-platform-content > h2 {
+    font-size: 22px;
+  }
+
+  .mobile-platform-image img {
+    max-height: 265px;
+  }
+
+  .mobile-expertise-card {
+    min-height: auto;
+
+    padding: 19px;
+
+    gap: 14px;
+  }
+
+  .mobile-expertise-card
+  .service-benefit-icon {
+    width: 54px;
+    height: 54px;
+
+    font-size: 19px;
+  }
+
+  .mobile-expertise-image img {
+    height: 265px;
+  }
+}
+/* =========================================================
+   MOBILE PLATFORM MULTIPLE IMAGES
+========================================================= */
+
+.mobile-platform-images {
+  min-width: 0;
+
+  display: grid;
+
+  align-self: stretch;
+}
+
+.mobile-platform-images.has-single-image {
+  grid-template-columns: 1fr;
+}
+
+.mobile-platform-images.has-multiple-images {
+  grid-template-columns: 1fr;
+
+  align-content: start;
+
+  gap: 24px;
+}
+
+.mobile-platform-images
+.mobile-platform-image {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 18px;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 16px 42px
+    rgba(15, 23, 42, 0.08);
+}
+
+.mobile-platform-images
+.mobile-platform-image img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+/* =========================================================
+   IT CONSULTING CUSTOM DESIGN
+========================================================= */
+
+/* Remove alternate backgrounds */
+
+body[data-service="it-consulting"]
+.service-section {
+  background: #ffffff !important;
+}
+
+/* =========================================================
+   FIRST SECTION
+========================================================= */
+
+body[data-service="it-consulting"]
+.service-overview-grid {
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 55px;
+}
+
+/* Ensure right-side image */
+
+body[data-service="it-consulting"]
+.service-overview-grid.image-right
+.service-overview-content {
+  order: 1;
+}
+
+body[data-service="it-consulting"]
+.service-overview-grid.image-right
+.service-overview-image {
+  order: 2;
+}
+
+/* Main first image */
+
+body[data-service="it-consulting"]
+.service-overview-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  padding: 0;
+
+  border-radius: 16px;
+
+  background: transparent;
+
+  box-shadow:
+    0 18px 45px
+    rgba(15, 23, 42, 0.1);
+}
+
+body[data-service="it-consulting"]
+.service-overview-image img {
+  width: 100%;
+  height: 500px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 16px;
+
+  box-shadow: none;
+}
+
+/* First section main title size decrease */
+
+body[data-service="it-consulting"]
+.service-overview-content > h2 {
+  margin-bottom: 18px;
+
+  font-size:
+    clamp(1.8rem, 2.5vw, 2.25rem);
+
+  line-height: 1.25;
+}
+
+/* Centered special heading size decrease */
+
+body[data-service="it-consulting"]
+.service-special-title {
+  max-width: 720px;
+
+  margin: 23px 0;
+
+  font-size:
+    clamp(1.7rem, 2.3vw, 2.1rem);
+
+  line-height: 1.3;
+
+  text-align: left;
+}
+
+/* First-section paragraphs */
+
+body[data-service="it-consulting"]
+.service-overview-content p {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Remove orange/light highlight box if rendering */
+
+body[data-service="it-consulting"]
+.service-highlight-box {
+  margin: 20px 0 24px;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 0;
+
+  background: transparent;
+
+  color: #667287;
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   CONSULTING SERVICES SECTION
+========================================================= */
+
+.it-consulting-services-section {
+  padding-top: 65px;
+  padding-bottom: 70px;
+
+  background: #ffffff !important;
+}
+
+.it-consulting-services-heading {
+  max-width: 1100px;
+
+  margin-bottom: 42px;
+}
+
+.it-consulting-services-heading > h2 {
+  margin: 0 0 18px;
+
+  color: #111827;
+
+  font-size:
+    clamp(1.9rem, 2.8vw, 2.4rem);
+
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.it-consulting-services-heading > p {
+  margin: 0 0 18px;
+
+  color: #667287;
+
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+/* Four service items */
+
+.it-consulting-services-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 35px 55px;
+}
+
+.it-consulting-service-item {
+  min-width: 0;
+
+  padding: 0;
+}
+
+.it-consulting-service-item h3 {
+  margin: 0 0 12px;
+
+  color: #111111;
+
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.it-consulting-service-item p {
+  margin: 0;
+
+  color: #747474;
+
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   IT CONSULTING EXPERTISE
+========================================================= */
+
+.it-consulting-expertise-section {
+  padding-top: 70px;
+  padding-bottom: 75px;
+
+  background: #ffffff !important;
+}
+
+.it-consulting-expertise-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(380px, 0.95fr);
+
+  align-items: stretch;
+
+  gap: 45px;
+}
+
+/* Left side */
+
+.it-consulting-expertise-content {
+  min-width: 0;
+}
+
+.it-consulting-expertise-content > h2 {
+  margin: 0 0 18px;
+
+  color: #111827;
+
+  font-size:
+    clamp(1.9rem, 2.8vw, 2.4rem);
+
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.it-consulting-expertise-content > p {
+  margin: 0 0 25px;
+
+  color: #667287;
+
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+/* Certified Experts and Quick Response */
+
+.it-consulting-benefit-cards {
+  display: grid;
+
+  gap: 18px;
+}
+
+.it-consulting-benefit-card {
+  min-height: 145px;
+
+  align-items: center;
+
+  padding: 23px 25px;
+
+  border: 1px solid #e6ebf2;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 14px 36px
+    rgba(15, 23, 42, 0.07);
+}
+
+.it-consulting-benefit-card
+.service-benefit-icon {
+  width: 62px;
+  height: 62px;
+
+  font-size: 22px;
+}
+
+.it-consulting-benefit-card h3 {
+  margin: 0 0 8px;
+
+  color: #111111;
+
+  font-size: 19px;
+}
+
+.it-consulting-benefit-card p {
+  margin: 0;
+
+  color: #727b8e;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Closing line attached inside left column */
+
+.it-consulting-closing {
+  margin-top: 25px;
+  padding-top: 22px;
+
+  border-top: 1px solid #e4e9f0;
+}
+
+.it-consulting-closing p {
+  margin: 0;
+
+  color: #667287;
+
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* Right image */
+
+.it-consulting-expertise-image {
+  min-width: 0;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 18px 45px
+    rgba(15, 23, 42, 0.1);
+}
+
+.it-consulting-expertise-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 510px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 16px;
+}
+/* =========================================================
+   IT STAFFING CUSTOM DESIGN
+========================================================= */
+
+/* Remove all alternating section backgrounds */
+
+body[data-service="it-staffing"]
+.service-section {
+  background: #ffffff !important;
+}
+
+/* =========================================================
+   FIRST SECTION
+========================================================= */
+
+body[data-service="it-staffing"]
+.service-overview-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 55px;
+}
+
+/* Left content */
+
+body[data-service="it-staffing"]
+.service-overview-grid.image-right
+.service-overview-content {
+  order: 1;
+}
+
+/* Right image */
+
+body[data-service="it-staffing"]
+.service-overview-grid.image-right
+.service-overview-image {
+  order: 2;
+}
+
+body[data-service="it-staffing"]
+.service-overview-image {
+  min-width: 0;
+
+  overflow: hidden;
+
+  padding: 0;
+
+  border-radius: 16px;
+
+  background: transparent;
+
+  box-shadow:
+    0 18px 45px
+    rgba(15, 23, 42, 0.1);
+}
+
+body[data-service="it-staffing"]
+.service-overview-image img {
+  width: 100%;
+  height: 500px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 16px;
+
+  box-shadow: none;
+}
+
+/* IT Staffing heading */
+
+body[data-service="it-staffing"]
+.service-overview-content > h2 {
+  margin-bottom: 18px;
+
+  font-size:
+    clamp(1.9rem, 2.6vw, 2.35rem);
+
+  line-height: 1.25;
+}
+
+/* Our Recruitment Process heading */
+
+body[data-service="it-staffing"]
+.service-special-title {
+  max-width: 720px;
+
+  margin: 25px 0 24px;
+
+  font-size:
+    clamp(1.75rem, 2.4vw, 2.15rem);
+
+  line-height: 1.3;
+
+  text-align: left;
+}
+
+body[data-service="it-staffing"]
+.service-overview-content p {
+  color: #667287;
+
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* Remove highlight box style if present */
+
+body[data-service="it-staffing"]
+.service-highlight-box {
+  margin: 20px 0 24px;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 0;
+
+  background: transparent;
+
+  color: #667287;
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.85;
+}
+
+/* =========================================================
+   WHY CHOOSE IT STAFFING
+========================================================= */
+
+.it-staffing-why-section {
+  padding-top: 65px;
+  padding-bottom: 70px;
+
+  background: #ffffff !important;
+}
+
+.it-staffing-why-content {
+  max-width: 1150px;
+}
+
+.it-staffing-why-content > h2 {
+  position: relative;
+
+  margin: 0 0 35px;
+  padding-bottom: 17px;
+
+  color: #111827;
+
+  font-size:
+    clamp(1.9rem, 2.8vw, 2.4rem);
+
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.it-staffing-why-content > h2::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 42px;
+  height: 3px;
+
+  border-radius: 20px;
+
+  background:
+    var(--orange, #f47a00);
+}
+
+.it-staffing-why-content > p {
+  margin: 0 0 24px;
+
+  color: #667287;
+
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.it-staffing-why-content > p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   IT STAFFING EXPERTISE
+========================================================= */
+
+.it-staffing-expertise-section {
+  padding-top: 70px;
+  padding-bottom: 75px;
+
+  background: #ffffff !important;
+}
+
+.it-staffing-expertise-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(380px, 0.95fr);
+
+  align-items: stretch;
+
+  gap: 45px;
+}
+
+/* Left content */
+
+.it-staffing-expertise-content {
+  min-width: 0;
+}
+
+.it-staffing-expertise-content > h2 {
+  margin: 0 0 22px;
+
+  color: #111827;
+
+  font-size:
+    clamp(1.9rem, 2.8vw, 2.4rem);
+
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.it-staffing-expertise-content > p {
+  margin: 0 0 25px;
+
+  color: #667287;
+
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+/* Certified Experts and Quick Response */
+
+.it-staffing-benefit-cards {
+  display: grid;
+
+  gap: 18px;
+}
+
+.it-staffing-benefit-card {
+  min-height: 145px;
+
+  align-items: center;
+
+  padding: 23px 25px;
+
+  border: 1px solid #e6ebf2;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 14px 36px
+    rgba(15, 23, 42, 0.07);
+}
+
+.it-staffing-benefit-card
+.service-benefit-icon {
+  width: 62px;
+  height: 62px;
+
+  font-size: 22px;
+}
+
+.it-staffing-benefit-card h3 {
+  margin: 0 0 8px;
+
+  color: #111111;
+
+  font-size: 19px;
+  line-height: 1.3;
+}
+
+.it-staffing-benefit-card p {
+  margin: 0;
+
+  color: #727b8e;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Closing line inside left column */
+
+.it-staffing-closing {
+  margin-top: 25px;
+  padding-top: 22px;
+
+  border-top: 1px solid #e4e9f0;
+}
+
+.it-staffing-closing p {
+  margin: 0;
+
+  color: #667287;
+
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* Right image */
+
+.it-staffing-expertise-image {
+  min-width: 0;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 18px 45px
+    rgba(15, 23, 42, 0.1);
+}
+
+.it-staffing-expertise-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 505px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 16px;
+}
+/* =========================================================
+   UI / UX DESIGN CUSTOM PAGE
+========================================================= */
+
+/* Remove all alternate section backgrounds */
+
+body[data-service="ui-ux-design"]
+.service-section {
+  background: #ffffff !important;
+}
+
+/* =========================================================
+   FIRST SECTION
+========================================================= */
+
+body[data-service="ui-ux-design"]
+.service-overview-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 55px;
+}
+
+/* Left content */
+
+body[data-service="ui-ux-design"]
+.service-overview-grid.image-right
+.service-overview-content {
+  order: 1;
+}
+
+/* Right image */
+
+body[data-service="ui-ux-design"]
+.service-overview-grid.image-right
+.service-overview-image {
+  order: 2;
+}
+
+body[data-service="ui-ux-design"]
+.service-overview-image {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  padding: 0;
+
+  border-radius: 16px;
+
+  background: transparent;
+
+  box-shadow:
+    0 18px 45px
+    rgba(15, 23, 42, 0.1);
+}
+
+body[data-service="ui-ux-design"]
+.service-overview-image img {
+  width: 100%;
+  height: 480px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 16px;
+
+  box-shadow: none;
+}
+
+/* UI-UX-Design main heading */
+
+body[data-service="ui-ux-design"]
+.service-overview-content > h2 {
+  margin-bottom: 18px;
+
+  font-size:
+    clamp(1.9rem, 2.6vw, 2.35rem);
+
+  line-height: 1.25;
+}
+
+/*
+  Strategic design thinking approach heading
+  Screenshot lo chala pedhaga undi kabatti decrease.
+*/
+
+body[data-service="ui-ux-design"]
+.service-special-title {
+  max-width: 700px;
+
+  margin: 24px 0 22px;
+
+  color: #111111;
+
+  font-size:
+    clamp(1.6rem, 2.15vw, 1.95rem);
+
+  font-weight: 800;
+  line-height: 1.3;
+
+  text-align: left;
+}
+
+body[data-service="ui-ux-design"]
+.service-overview-content p {
+  color: #667287;
+
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* Remove highlight background if generated */
+
+body[data-service="ui-ux-design"]
+.service-highlight-box {
+  margin: 20px 0 24px;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 0;
+
+  background: transparent;
+
+  color: #667287;
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.85;
+}
+
+/* =========================================================
+   UI/UX FEATURES SECTION
+========================================================= */
+
+.uiux-features-section {
+  padding-top: 65px;
+  padding-bottom: 70px;
+
+  background: #ffffff !important;
+}
+
+.uiux-features-heading {
+  max-width: 1100px;
+
+  margin-bottom: 43px;
+}
+
+.uiux-features-heading > h2 {
+  position: relative;
+
+  margin: 0 0 25px;
+  padding-bottom: 16px;
+
+  color: #111827;
+
+  font-size:
+    clamp(1.85rem, 2.65vw, 2.3rem);
+
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.uiux-features-heading > h2::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 42px;
+  height: 3px;
+
+  border-radius: 20px;
+
+  background:
+    var(--orange, #f47a00);
+}
+
+.uiux-features-heading > p {
+  margin: 0;
+
+  color: #747474;
+
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* All four points in same section */
+
+.uiux-features-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 42px 60px;
+}
+
+.uiux-feature-item {
+  min-width: 0;
+}
+
+.uiux-feature-item h3 {
+  margin: 0 0 15px;
+
+  color: #111111;
+
+  font-size:
+    clamp(1.3rem, 1.8vw, 1.6rem);
+
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.uiux-feature-item p {
+  margin: 0;
+
+  color: #747474;
+
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   UI/UX EXPERTISE SECTION
+========================================================= */
+
+.uiux-expertise-section {
+  padding-top: 70px;
+  padding-bottom: 75px;
+
+  background: #ffffff !important;
+}
+
+.uiux-expertise-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(380px, 0.95fr);
+
+  align-items: stretch;
+
+  gap: 45px;
+}
+
+/* Left content */
+
+.uiux-expertise-content {
+  min-width: 0;
+}
+
+.uiux-expertise-content > h2 {
+  margin: 0 0 22px;
+
+  color: #111827;
+
+  font-size:
+    clamp(1.9rem, 2.8vw, 2.4rem);
+
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.uiux-expertise-content > p {
+  margin: 0 0 25px;
+
+  color: #667287;
+
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+/* Certified Experts / Quick Response */
+
+.uiux-benefit-cards {
+  display: grid;
+
+  gap: 18px;
+}
+
+.uiux-benefit-card {
+  min-height: 145px;
+
+  align-items: center;
+
+  padding: 23px 25px;
+
+  border: 1px solid #e6ebf2;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 14px 36px
+    rgba(15, 23, 42, 0.07);
+}
+
+.uiux-benefit-card
+.service-benefit-icon {
+  width: 62px;
+  height: 62px;
+
+  font-size: 22px;
+}
+
+.uiux-benefit-card h3 {
+  margin: 0 0 8px;
+
+  color: #111111;
+
+  font-size: 19px;
+  line-height: 1.3;
+}
+
+.uiux-benefit-card p {
+  margin: 0;
+
+  color: #727b8e;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Closing text inside left column */
+
+.uiux-closing {
+  margin-top: 25px;
+  padding-top: 22px;
+
+  border-top: 1px solid #e4e9f0;
+}
+
+.uiux-closing p {
+  margin: 0;
+
+  color: #667287;
+
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* Right-side expertise image */
+
+.uiux-expertise-image {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 18px 45px
+    rgba(15, 23, 42, 0.1);
+}
+
+.uiux-expertise-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 16px;
+}
+@media (max-width: 900px) {
+  body[data-service="ui-ux-design"]
+  .service-overview-grid,
+  .uiux-expertise-layout {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-service="ui-ux-design"]
+  .service-overview-grid.image-right
+  .service-overview-image {
+    order: 1;
+  }
+
+  body[data-service="ui-ux-design"]
+  .service-overview-grid.image-right
+  .service-overview-content {
+    order: 2;
+  }
+
+  body[data-service="ui-ux-design"]
+  .service-overview-image,
+  .uiux-expertise-image {
+    width: 100%;
+    max-width: 740px;
+
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  body[data-service="ui-ux-design"]
+  .service-overview-image img {
+    height: 430px;
+  }
+
+  .uiux-expertise-image img {
+    height: 430px;
+    min-height: 0;
+  }
+}
+@media (max-width: 700px) {
+  body[data-service="ui-ux-design"]
+  .service-overview-grid {
+    gap: 35px;
+  }
+
+  body[data-service="ui-ux-design"]
+  .service-overview-image img {
+    height: 325px;
+  }
+
+  body[data-service="ui-ux-design"]
+  .service-overview-content > h2 {
+    font-size: 27px;
+  }
+
+  body[data-service="ui-ux-design"]
+  .service-special-title {
+    font-size: 25px;
+  }
+
+  .uiux-features-section,
+  .uiux-expertise-section {
+    padding-top: 52px;
+    padding-bottom: 55px;
+  }
+
+  .uiux-features-grid {
+    grid-template-columns: 1fr;
+
+    gap: 34px;
+  }
+
+  .uiux-features-heading > h2,
+  .uiux-expertise-content > h2 {
+    font-size: 27px;
+  }
+
+  .uiux-features-heading > p,
+  .uiux-feature-item p,
+  .uiux-expertise-content > p {
+    font-size: 14px;
+  }
+
+  .uiux-feature-item h3 {
+    font-size: 21px;
+  }
+
+  .uiux-expertise-layout {
+    gap: 32px;
+  }
+
+  .uiux-expertise-image img {
+    height: 345px;
+  }
+}
+@media (max-width: 480px) {
+  body[data-service="ui-ux-design"]
+  .service-overview-image img {
+    height: 250px;
+  }
+
+  body[data-service="ui-ux-design"]
+  .service-overview-content > h2 {
+    font-size: 24px;
+  }
+
+  body[data-service="ui-ux-design"]
+  .service-special-title {
+    font-size: 22px;
+  }
+
+  .uiux-features-heading > h2,
+  .uiux-expertise-content > h2 {
+    font-size: 24px;
+  }
+
+  .uiux-feature-item h3 {
+    font-size: 20px;
+  }
+
+  .uiux-benefit-card {
+    min-height: auto;
+
+    padding: 19px;
+
+    gap: 14px;
+  }
+
+  .uiux-benefit-card
+  .service-benefit-icon {
+    width: 54px;
+    height: 54px;
+
+    font-size: 19px;
+  }
+
+  .uiux-expertise-image img {
+    height: 270px;
+  }
+}
+/* =========================================================
+   DIGITAL MARKETING CUSTOM PAGE
+========================================================= */
+
+body[data-service="digital-marketing"]
+.service-section {
+  background: #ffffff !important;
+}
+
+/* =========================================================
+   FIRST SECTION
+   LEFT CONTENT + RIGHT IMAGE
+========================================================= */
+
+body[data-service="digital-marketing"]
+.service-overview-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 55px;
+}
+
+body[data-service="digital-marketing"]
+.service-overview-grid.image-right
+.service-overview-content {
+  order: 1;
+}
+
+body[data-service="digital-marketing"]
+.service-overview-grid.image-right
+.service-overview-image {
+  order: 2;
+}
+
+body[data-service="digital-marketing"]
+.service-overview-image {
+  min-width: 0;
+
+  overflow: hidden;
+
+  padding: 0;
+
+  border-radius: 16px;
+
+  background: transparent;
+
+  box-shadow:
+    0 18px 45px
+    rgba(15, 23, 42, 0.1);
+}
+
+body[data-service="digital-marketing"]
+.service-overview-image img {
+  width: 100%;
+  height: 500px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 16px;
+
+  box-shadow: none;
+}
+
+body[data-service="digital-marketing"]
+.service-overview-content > h2 {
+  margin-bottom: 18px;
+
+  font-size:
+    clamp(1.9rem, 2.6vw, 2.35rem);
+
+  line-height: 1.25;
+}
+
+body[data-service="digital-marketing"]
+.service-overview-content p {
+  color: #667287;
+
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+body[data-service="digital-marketing"]
+.service-highlight-box {
+  margin: 20px 0 24px;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 0;
+
+  background: transparent;
+
+  color: #667287;
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.85;
+}
+
+/* =========================================================
+   AGENCY VALUES
+   LEFT IMAGE + RIGHT CONTENT
+========================================================= */
+
+.digital-values-section {
+  padding-top: 65px;
+  padding-bottom: 70px;
+
+  background: #ffffff !important;
+}
+
+.digital-values-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.95fr)
+    minmax(0, 1.05fr);
+
+  align-items: center;
+
+  gap: 55px;
+}
+
+.digital-values-image {
+  min-width: 0;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 18px 45px
+    rgba(15, 23, 42, 0.09);
+}
+
+.digital-values-image img {
+  width: 100%;
+  height: 450px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 16px;
+}
+
+.digital-values-content {
+  min-width: 0;
+}
+
+.digital-values-content > h2 {
+  position: relative;
+
+  margin: 0 0 26px;
+  padding-bottom: 16px;
+
+  color: #111827;
+
+  font-size:
+    clamp(1.9rem, 2.8vw, 2.4rem);
+
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.digital-values-content > h2::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 42px;
+  height: 3px;
+
+  border-radius: 20px;
+
+  background:
+    var(--orange, #f47a00);
+}
+
+.digital-values-content > p {
+  margin: 0 0 23px;
+
+  color: #667287;
+
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.digital-values-content
+.service-bullet-list {
+  display: grid;
+
+  gap: 14px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.digital-values-content
+.service-bullet-list li {
+  position: relative;
+
+  padding-left: 34px;
+
+  color: #707789;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.digital-values-content
+.service-bullet-list li::before {
+  content: "\f058";
+
+  position: absolute;
+
+  top: 1px;
+  left: 0;
+
+  color: #087bf1;
+
+  font-family:
+    "Font Awesome 6 Free";
+
+  font-size: 19px;
+  font-weight: 900;
+}
+
+/* =========================================================
+   DIGITAL MARKETING SERVICES
+   TWO ITEMS PER ROW
+========================================================= */
+
+.digital-marketing-services-section {
+  padding-top: 70px;
+  padding-bottom: 75px;
+
+  background: #ffffff !important;
+}
+
+.digital-marketing-services-heading {
+  max-width: 1050px;
+
+  margin-bottom: 42px;
+}
+
+.digital-marketing-services-heading > h2 {
+  position: relative;
+
+  margin: 0 0 24px;
+  padding-bottom: 16px;
+
+  color: #111827;
+
+  font-size:
+    clamp(1.9rem, 2.8vw, 2.4rem);
+
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.digital-marketing-services-heading > h2::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 42px;
+  height: 3px;
+
+  border-radius: 20px;
+
+  background:
+    var(--orange, #f47a00);
+}
+
+.digital-marketing-services-heading > p {
+  margin: 0;
+
+  color: #667287;
+
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.digital-marketing-services-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 45px 60px;
+}
+
+.digital-marketing-service-item {
+  min-width: 0;
+}
+
+.digital-marketing-service-item h3 {
+  margin: 0 0 15px;
+
+  color: #111111;
+
+  font-size:
+    clamp(1.35rem, 1.9vw, 1.65rem);
+
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.digital-marketing-service-item p {
+  margin: 0;
+
+  color: #667287;
+
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   FINAL DIGITAL MARKETING SERVICES
+========================================================= */
+
+.digital-expertise-section {
+  padding-top: 70px;
+  padding-bottom: 75px;
+
+  background: #ffffff !important;
+}
+
+.digital-expertise-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(380px, 0.95fr);
+
+  align-items: stretch;
+
+  gap: 45px;
+}
+
+.digital-expertise-content {
+  min-width: 0;
+}
+
+.digital-expertise-content > h2 {
+  margin: 0 0 22px;
+
+  color: #111827;
+
+  font-size:
+    clamp(1.9rem, 2.8vw, 2.4rem);
+
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.digital-expertise-content > p {
+  margin: 0 0 25px;
+
+  color: #667287;
+
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.digital-benefit-cards {
+  display: grid;
+
+  gap: 18px;
+}
+
+.digital-benefit-card {
+  min-height: 145px;
+
+  align-items: center;
+
+  padding: 23px 25px;
+
+  border: 1px solid #e6ebf2;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 14px 36px
+    rgba(15, 23, 42, 0.07);
+}
+
+.digital-benefit-card
+.service-benefit-icon {
+  width: 62px;
+  height: 62px;
+
+  font-size: 22px;
+}
+
+.digital-benefit-card h3 {
+  margin: 0 0 8px;
+
+  color: #111111;
+
+  font-size: 19px;
+  line-height: 1.3;
+}
+
+.digital-benefit-card p {
+  margin: 0;
+
+  color: #727b8e;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.digital-closing {
+  margin-top: 25px;
+  padding-top: 22px;
+
+  border-top: 1px solid #e4e9f0;
+}
+
+.digital-closing p {
+  margin: 0;
+
+  color: #667287;
+
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.digital-expertise-image {
+  min-width: 0;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 18px 45px
+    rgba(15, 23, 42, 0.1);
+}
+
+.digital-expertise-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 16px;
+}
+@media (max-width: 900px) {
+  body[data-service="digital-marketing"]
+  .service-overview-grid,
+  .digital-values-layout,
+  .digital-expertise-layout {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-service="digital-marketing"]
+  .service-overview-grid.image-right
+  .service-overview-image {
+    order: 1;
+  }
+
+  body[data-service="digital-marketing"]
+  .service-overview-grid.image-right
+  .service-overview-content {
+    order: 2;
+  }
+
+  body[data-service="digital-marketing"]
+  .service-overview-image,
+  .digital-values-image,
+  .digital-expertise-image {
+    width: 100%;
+    max-width: 740px;
+
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  body[data-service="digital-marketing"]
+  .service-overview-image img {
+    height: 430px;
+  }
+
+  .digital-values-image img {
+    height: 410px;
+  }
+
+  .digital-expertise-image img {
+    height: 430px;
+    min-height: 0;
+  }
+}
+@media (max-width: 700px) {
+  body[data-service="digital-marketing"]
+  .service-overview-grid {
+    gap: 35px;
+  }
+
+  body[data-service="digital-marketing"]
+  .service-overview-image img {
+    height: 320px;
+  }
+
+  body[data-service="digital-marketing"]
+  .service-overview-content > h2 {
+    font-size: 27px;
+  }
+
+  .digital-values-section,
+  .digital-marketing-services-section,
+  .digital-expertise-section {
+    padding-top: 52px;
+    padding-bottom: 55px;
+  }
+
+  .digital-values-layout,
+  .digital-expertise-layout {
+    gap: 32px;
+  }
+
+  .digital-values-image img {
+    height: 315px;
+  }
+
+  .digital-values-content > h2,
+  .digital-marketing-services-heading > h2,
+  .digital-expertise-content > h2 {
+    font-size: 27px;
+  }
+
+  .digital-marketing-services-grid {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .digital-marketing-service-item h3 {
+    font-size: 22px;
+  }
+
+  .digital-marketing-service-item p,
+  .digital-values-content > p,
+  .digital-values-content
+  .service-bullet-list li,
+  .digital-expertise-content > p {
+    font-size: 14px;
+  }
+
+  .digital-expertise-image img {
+    height: 345px;
+  }
+}
+@media (max-width: 480px) {
+  body[data-service="digital-marketing"]
+  .service-overview-image img {
+    height: 250px;
+  }
+
+  body[data-service="digital-marketing"]
+  .service-overview-content > h2 {
+    font-size: 24px;
+  }
+
+  .digital-values-image img {
+    height: 245px;
+  }
+
+  .digital-values-content > h2,
+  .digital-marketing-services-heading > h2,
+  .digital-expertise-content > h2 {
+    font-size: 24px;
+  }
+
+  .digital-marketing-service-item h3 {
+    font-size: 20px;
+  }
+
+  .digital-benefit-card {
+    min-height: auto;
+
+    padding: 19px;
+
+    gap: 14px;
+  }
+
+  .digital-benefit-card
+  .service-benefit-icon {
+    width: 54px;
+    height: 54px;
+
+    font-size: 19px;
+  }
+
+  .digital-expertise-image img {
+    height: 270px;
+  }
+}
+/* =========================================================
+   COMBINED RESPONSIVE CSS
+
+   Pages:
+   1. Application Development
+   2. Software Development
+   3. Web Development
+   4. IT Consulting
+   5. IT Staffing
+========================================================= */
+
+/* =========================================================
+   LARGE LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  /* ---------------- APPLICATION DEVELOPMENT ---------------- */
+
+  body[data-service="application-development"]
+  .service-challenges-section
+  .service-two-column-layout {
+    grid-template-columns:
+      minmax(0, 1.05fr)
+      minmax(320px, 0.95fr);
+
+    gap: 42px;
+  }
+
+  .application-modernization-layout {
+    grid-template-columns:
+      minmax(0, 1.05fr)
+      minmax(340px, 0.95fr);
+
+    gap: 36px;
+  }
+
+  .application-modernization-image img {
+    min-height: 460px;
+  }
+
+  /* ---------------- SOFTWARE DEVELOPMENT ---------------- */
+
+  body[data-service="software-development"]
+  .service-overview-grid {
+    grid-template-columns:
+      minmax(0, 0.95fr)
+      minmax(0, 1.05fr);
+
+    gap: 42px;
+  }
+
+  body[data-service="software-development"]
+  .service-overview-image img {
+    height: 480px;
+  }
+
+  .software-agency-values-layout,
+  .software-human-centric-layout {
+    gap: 42px;
+  }
+
+  .software-agency-values-image img {
+    height: 410px;
+  }
+
+  .software-human-centric-image img {
+    min-height: 510px;
+  }
+
+  /* ---------------- WEB DEVELOPMENT ---------------- */
+
+  .web-development-card-grid {
+    gap: 48px 30px;
+  }
+
+  .web-development-card-image img {
+    height: 360px;
+  }
+
+  .web-development-expertise-layout {
+    gap: 38px;
+  }
+
+  .web-development-expertise-image img {
+    min-height: 500px;
+  }
+
+  /* ---------------- IT CONSULTING ---------------- */
+
+  body[data-service="it-consulting"]
+  .service-overview-grid {
+    gap: 42px;
+  }
+
+  body[data-service="it-consulting"]
+  .service-overview-image img {
+    height: 460px;
+  }
+
+  .it-consulting-services-grid {
+    gap: 32px 42px;
+  }
+
+  .it-consulting-expertise-layout {
+    gap: 38px;
+  }
+
+  .it-consulting-expertise-image img {
+    min-height: 480px;
+  }
+
+  /* ---------------- IT STAFFING ---------------- */
+
+  body[data-service="it-staffing"]
+  .service-overview-grid {
+    gap: 42px;
+  }
+
+  body[data-service="it-staffing"]
+  .service-overview-image img {
+    height: 460px;
+  }
+
+  .it-staffing-expertise-layout {
+    gap: 38px;
+  }
+
+  .it-staffing-expertise-image img {
+    min-height: 470px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  /* ---------------- COMMON CUSTOM PAGE LAYOUTS ---------------- */
+
+  body[data-service="application-development"]
+  .service-challenges-section
+  .service-two-column-layout,
+
+  .application-modernization-layout,
+
+  body[data-service="software-development"]
+  .service-overview-grid,
+
+  .software-agency-values-layout,
+  .software-human-centric-layout,
+
+  .web-development-expertise-layout,
+
+  body[data-service="it-consulting"]
+  .service-overview-grid,
+
+  .it-consulting-expertise-layout,
+
+  body[data-service="it-staffing"]
+  .service-overview-grid,
+
+  .it-staffing-expertise-layout {
+    grid-template-columns: 1fr;
+  }
+
+  /* ---------------- COMMON IMAGE ORDER ---------------- */
+
+  body[data-service="software-development"]
+  .service-overview-grid.image-right
+  .service-overview-image,
+
+  body[data-service="it-consulting"]
+  .service-overview-grid.image-right
+  .service-overview-image,
+
+  body[data-service="it-staffing"]
+  .service-overview-grid.image-right
+  .service-overview-image {
+    order: 1;
+  }
+
+  body[data-service="software-development"]
+  .service-overview-grid.image-right
+  .service-overview-content,
+
+  body[data-service="it-consulting"]
+  .service-overview-grid.image-right
+  .service-overview-content,
+
+  body[data-service="it-staffing"]
+  .service-overview-grid.image-right
+  .service-overview-content {
+    order: 2;
+  }
+
+  /* =========================================================
+     APPLICATION DEVELOPMENT
+  ========================================================= */
+
+  body[data-service="application-development"]
+  .service-challenges-section
+  .service-two-column-layout {
+    gap: 35px;
+  }
+
+  body[data-service="application-development"]
+  .service-challenges-section
+  .service-side-image {
+    width: 100%;
+    max-width: 720px;
+
+    margin: 0 auto;
+  }
+
+  body[data-service="application-development"]
+  .service-challenges-section
+  .service-side-image img {
+    height: 420px;
+  }
+
+  .application-modernization-layout {
+    gap: 35px;
+  }
+
+  .application-modernization-image {
+    width: 100%;
+    max-width: 720px;
+
+    margin: 0 auto;
+  }
+
+  .application-modernization-image img {
+    height: 430px;
+    min-height: 0;
+  }
+
+  /* =========================================================
+     SOFTWARE DEVELOPMENT
+  ========================================================= */
+
+  body[data-service="software-development"]
+  .service-overview-grid {
+    gap: 35px;
+  }
+
+  body[data-service="software-development"]
+  .service-overview-image {
+    width: 100%;
+    max-width: 740px;
+
+    margin: 0 auto;
+  }
+
+  body[data-service="software-development"]
+  .service-overview-image img {
+    height: 430px;
+  }
+
+  .software-agency-values-layout {
+    gap: 35px;
+  }
+
+  .software-agency-values-image {
+    width: 100%;
+    max-width: 720px;
+
+    margin: 0 auto;
+  }
+
+  .software-agency-values-image img {
+    height: 390px;
+  }
+
+  .software-human-centric-layout {
+    gap: 35px;
+  }
+
+  .software-human-centric-image {
+    width: 100%;
+    max-width: 720px;
+
+    margin: 0 auto;
+  }
+
+  .software-human-centric-image img {
+    height: 430px;
+    min-height: 0;
+  }
+
+  /* =========================================================
+     WEB DEVELOPMENT
+  ========================================================= */
+
+  .web-development-card-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 45px 25px;
+  }
+
+  .web-development-card-image img {
+    height: 300px;
+  }
+
+  .web-development-expertise-layout {
+    gap: 35px;
+  }
+
+  .web-development-expertise-image {
+    width: 100%;
+    max-width: 720px;
+
+    margin: 0 auto;
+  }
+
+  .web-development-expertise-image img {
+    height: 430px;
+    min-height: 0;
+  }
+
+  /* =========================================================
+     IT CONSULTING
+  ========================================================= */
+
+  body[data-service="it-consulting"]
+  .service-overview-grid {
+    gap: 35px;
+  }
+
+  body[data-service="it-consulting"]
+  .service-overview-image {
+    width: 100%;
+    max-width: 720px;
+
+    margin: 0 auto;
+  }
+
+  body[data-service="it-consulting"]
+  .service-overview-image img {
+    height: 420px;
+  }
+
+  .it-consulting-services-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 32px 30px;
+  }
+
+  .it-consulting-expertise-layout {
+    gap: 35px;
+  }
+
+  .it-consulting-expertise-image {
+    width: 100%;
+    max-width: 720px;
+
+    margin: 0 auto;
+  }
+
+  .it-consulting-expertise-image img {
+    height: 430px;
+    min-height: 0;
+  }
+
+  /* =========================================================
+     IT STAFFING
+  ========================================================= */
+
+  body[data-service="it-staffing"]
+  .service-overview-grid {
+    gap: 35px;
+  }
+
+  body[data-service="it-staffing"]
+  .service-overview-image {
+    width: 100%;
+    max-width: 720px;
+
+    margin: 0 auto;
+  }
+
+  body[data-service="it-staffing"]
+  .service-overview-image img {
+    height: 420px;
+  }
+
+  .it-staffing-expertise-layout {
+    gap: 35px;
+  }
+
+  .it-staffing-expertise-image {
+    width: 100%;
+    max-width: 720px;
+
+    margin: 0 auto;
+  }
+
+  .it-staffing-expertise-image img {
+    height: 420px;
+    min-height: 0;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  /* ---------------- COMMON SECTIONS ---------------- */
+
+  .application-modernization-section,
+  .software-agency-values-section,
+  .software-human-centric-section,
+  .web-development-cards-section,
+  .web-development-expertise-section,
+  .it-consulting-services-section,
+  .it-consulting-expertise-section,
+  .it-staffing-why-section,
+  .it-staffing-expertise-section {
+    padding-top: 50px;
+    padding-bottom: 55px;
+  }
+
+  /* ---------------- COMMON CUSTOM HEADINGS ---------------- */
+
+  .application-modernization-content > h2,
+  .software-agency-values-content h2,
+  .software-human-centric-content > h2,
+  .web-development-expertise-content > h2,
+  .it-consulting-services-heading > h2,
+  .it-consulting-expertise-content > h2,
+  .it-staffing-why-content > h2,
+  .it-staffing-expertise-content > h2 {
+    font-size: 27px;
+  }
+
+  /* ---------------- COMMON PARAGRAPHS ---------------- */
+
+  .application-modernization-content > p,
+  .application-modernization-closing p,
+
+  .software-agency-values-content > p,
+  .software-human-centric-content > p,
+  .software-human-centric-closing p,
+
+  .web-development-card > p,
+  .web-development-expertise-content > p,
+  .web-development-closing p,
+
+  .it-consulting-services-heading > p,
+  .it-consulting-service-item p,
+  .it-consulting-expertise-content > p,
+  .it-consulting-closing p,
+
+  .it-staffing-why-content > p,
+  .it-staffing-expertise-content > p,
+  .it-staffing-closing p {
+    font-size: 14px;
+  }
+
+  /* =========================================================
+     APPLICATION DEVELOPMENT
+  ========================================================= */
+
+  body[data-service="application-development"]
+  .service-challenges-content h2 {
+    font-size: 25px;
+  }
+
+  body[data-service="application-development"]
+  .service-challenges-section
+  .service-side-image img {
+    height: 320px;
+  }
+
+  .application-modernization-layout {
+    gap: 30px;
+  }
+
+  .application-modernization-image img {
+    height: 340px;
+  }
+
+  .application-benefit-card {
+    min-height: auto;
+
+    padding: 20px;
+  }
+
+  /* =========================================================
+     SOFTWARE DEVELOPMENT
+  ========================================================= */
+
+  body[data-service="software-development"]
+  .service-overview-image img {
+    height: 330px;
+  }
+
+  body[data-service="software-development"]
+  .service-overview-content h2 {
+    font-size: 28px;
+  }
+
+  .software-agency-values-image img {
+    height: 310px;
+  }
+
+  .software-human-centric-image img {
+    height: 345px;
+  }
+
+  .software-benefit-card {
+    min-height: auto;
+
+    padding: 20px;
+  }
+
+  /* =========================================================
+     WEB DEVELOPMENT
+  ========================================================= */
+
+  .web-development-card-grid {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .web-development-card h3 {
+    font-size: 23px;
+  }
+
+  .web-development-card-image {
+    max-width: 650px;
+
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .web-development-card-image img {
+    height: 310px;
+
+    object-fit: contain;
+  }
+
+  .web-development-expertise-image img {
+    height: 345px;
+  }
+
+  .web-development-benefit-card {
+    min-height: auto;
+
+    padding: 20px;
+  }
+
+  /* =========================================================
+     IT CONSULTING
+  ========================================================= */
+
+  body[data-service="it-consulting"]
+  .service-overview-image img {
+    height: 330px;
+  }
+
+  body[data-service="it-consulting"]
+  .service-overview-content > h2 {
+    font-size: 27px;
+  }
+
+  body[data-service="it-consulting"]
+  .service-special-title {
+    font-size: 25px;
+  }
+
+  .it-consulting-services-grid {
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+  }
+
+  .it-consulting-service-item h3 {
+    font-size: 21px;
+  }
+
+  .it-consulting-expertise-image img {
+    height: 345px;
+  }
+
+  .it-consulting-benefit-card {
+    min-height: auto;
+
+    padding: 20px;
+  }
+
+  /* =========================================================
+     IT STAFFING
+  ========================================================= */
+
+  body[data-service="it-staffing"]
+  .service-overview-image img {
+    height: 330px;
+  }
+
+  body[data-service="it-staffing"]
+  .service-overview-content > h2 {
+    font-size: 27px;
+  }
+
+  body[data-service="it-staffing"]
+  .service-special-title {
+    font-size: 25px;
+  }
+
+  .it-staffing-expertise-image img {
+    height: 345px;
+  }
+
+  .it-staffing-benefit-card {
+    min-height: auto;
+
+    padding: 20px;
+  }
+
+  /* ---------------- BENEFIT CARDS COMMON ---------------- */
+
+  .application-benefit-card,
+  .software-benefit-card,
+  .web-development-benefit-card,
+  .it-consulting-benefit-card,
+  .it-staffing-benefit-card {
+    gap: 15px;
+  }
+
+  .application-benefit-card
+  .service-benefit-icon,
+
+  .software-benefit-card
+  .service-benefit-icon,
+
+  .web-development-benefit-card
+  .service-benefit-icon,
+
+  .it-consulting-benefit-card
+  .service-benefit-icon,
+
+  .it-staffing-benefit-card
+  .service-benefit-icon {
+    width: 56px;
+    height: 56px;
+
+    font-size: 20px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  /* ---------------- COMMON CUSTOM HEADINGS ---------------- */
+
+  .application-modernization-content > h2,
+  .software-agency-values-content h2,
+  .software-human-centric-content > h2,
+  .web-development-expertise-content > h2,
+  .it-consulting-services-heading > h2,
+  .it-consulting-expertise-content > h2,
+  .it-staffing-why-content > h2,
+  .it-staffing-expertise-content > h2 {
+    font-size: 23px;
+  }
+
+  /* =========================================================
+     APPLICATION DEVELOPMENT
+  ========================================================= */
+
+  body[data-service="application-development"]
+  .service-challenges-content h2 {
+    font-size: 22px;
+  }
+
+  body[data-service="application-development"]
+  .service-challenges-section
+  .service-side-image img {
+    height: 240px;
+  }
+
+  .application-modernization-image img {
+    height: 260px;
+  }
+
+  /* =========================================================
+     SOFTWARE DEVELOPMENT
+  ========================================================= */
+
+  body[data-service="software-development"]
+  .service-overview-image img {
+    height: 245px;
+  }
+
+  body[data-service="software-development"]
+  .service-overview-content h2 {
+    font-size: 25px;
+  }
+
+  .software-agency-values-image img {
+    height: 245px;
+  }
+
+  .software-human-centric-image img {
+    height: 270px;
+  }
+
+  /* =========================================================
+     WEB DEVELOPMENT
+  ========================================================= */
+
+  .web-development-card h3 {
+    font-size: 21px;
+  }
+
+  .web-development-card-image img {
+    height: 230px;
+  }
+
+  .web-development-expertise-image img {
+    height: 270px;
+  }
+
+  /* =========================================================
+     IT CONSULTING
+  ========================================================= */
+
+  body[data-service="it-consulting"]
+  .service-overview-image img {
+    height: 245px;
+  }
+
+  body[data-service="it-consulting"]
+  .service-overview-content > h2 {
+    font-size: 24px;
+  }
+
+  body[data-service="it-consulting"]
+  .service-special-title {
+    font-size: 22px;
+  }
+
+  .it-consulting-service-item h3 {
+    font-size: 20px;
+  }
+
+  .it-consulting-expertise-image img {
+    height: 270px;
+  }
+
+  /* =========================================================
+     IT STAFFING
+  ========================================================= */
+
+  body[data-service="it-staffing"]
+  .service-overview-image img {
+    height: 245px;
+  }
+
+  body[data-service="it-staffing"]
+  .service-overview-content > h2 {
+    font-size: 24px;
+  }
+
+  body[data-service="it-staffing"]
+  .service-special-title {
+    font-size: 22px;
+  }
+
+  .it-staffing-expertise-image img {
+    height: 270px;
+  }
+
+  /* ---------------- BENEFIT CARDS COMMON ---------------- */
+
+  .application-benefit-card,
+  .software-benefit-card,
+  .web-development-benefit-card,
+  .it-consulting-benefit-card,
+  .it-staffing-benefit-card {
+    padding: 18px;
+
+    gap: 13px;
+  }
+
+  .application-benefit-card
+  .service-benefit-icon,
+
+  .software-benefit-card
+  .service-benefit-icon,
+
+  .web-development-benefit-card
+  .service-benefit-icon,
+
+  .it-consulting-benefit-card
+  .service-benefit-icon,
+
+  .it-staffing-benefit-card
+  .service-benefit-icon {
+    width: 50px;
+    height: 50px;
+
+    font-size: 18px;
+  }
+
+  .application-benefit-card h3,
+  .software-benefit-card h3,
+  .web-development-benefit-card h3,
+  .it-consulting-benefit-card h3,
+  .it-staffing-benefit-card h3 {
+    font-size: 17px;
+  }
+}
+/* Service form spam protection field */
+
+.service-form-honeypot {
+  position: absolute !important;
+
+  width: 1px !important;
+  height: 1px !important;
+
+  overflow: hidden !important;
+
+  opacity: 0 !important;
+
+  pointer-events: none !important;
+
+  left: -9999px !important;
+}

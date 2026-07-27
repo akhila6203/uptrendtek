@@ -1,0 +1,845 @@
+/* =========================================================
+   UPTRENTEK COMMON CSS
+   Logo Theme:
+   Orange + Deep Navy + White
+========================================================= */
+
+:root {
+  /* Brand colors */
+
+  --primary-dark: #110d22;
+  --primary-dark-soft: #1c1730;
+
+  --navy: #171228;
+  --navy-light: #28213f;
+  --navy-soft: #342b4c;
+
+  --orange: #f47a00;
+  --orange-dark: #d96100;
+  --orange-light: #ff982e;
+  --orange-soft: #fff1e5;
+  --orange-soft-2: #fff8f2;
+
+  --white: #ffffff;
+  --black: #111111;
+
+  /* Text */
+
+  --text-dark: #171228;
+  --text-heading: #110d22;
+  --text-body: #5e6070;
+  --text-muted: #858593;
+
+  /* Background */
+
+  --surface: #ffffff;
+  --surface-alt: #faf9fc;
+  --surface-soft: #fffaf6;
+
+  /* Border */
+
+  --border: #ece9f0;
+  --border-dark: #d9d4df;
+
+  /* Status */
+
+  --success: #15803d;
+  --danger: #c2410c;
+
+  /* Shadow */
+
+  --shadow:
+    0 18px 45px rgba(17, 13, 34, 0.1);
+
+  --shadow-hover:
+    0 24px 55px rgba(17, 13, 34, 0.16);
+
+  /* Header size */
+
+  --top-header-height: 38px;
+  --main-header-height: 82px;
+  --full-header-height: 120px;
+
+  /* Common */
+
+  --container-width: 1380px;
+  --transition: 0.28s ease;
+
+  color-scheme: light;
+}
+
+/* =========================================================
+   OPTIONAL DARK THEME
+========================================================= */
+
+:root[data-theme="dark"] {
+  --primary-dark: #0c0916;
+  --primary-dark-soft: #161121;
+
+  --navy: #f6f2fb;
+  --navy-light: #e7e0ef;
+  --navy-soft: #342b4c;
+
+  --orange: #ff8a1f;
+  --orange-dark: #e76c00;
+  --orange-light: #ffa149;
+  --orange-soft: #362214;
+  --orange-soft-2: #211811;
+
+  --white: #f8f5fb;
+  --black: #050505;
+
+  --text-dark: #f8f5fb;
+  --text-heading: #ffffff;
+  --text-body: #c3bccb;
+  --text-muted: #97909e;
+
+  --surface: #171220;
+  --surface-alt: #201928;
+  --surface-soft: #261b15;
+
+  --border: #372e42;
+  --border-dark: #4a3f56;
+
+  --shadow:
+    0 18px 45px rgba(0, 0, 0, 0.34);
+
+  --shadow-hover:
+    0 24px 55px rgba(0, 0, 0, 0.46);
+
+  color-scheme: dark;
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+
+  overflow-x: hidden;
+
+  color: var(--text-body);
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--surface-alt) 0%,
+      var(--surface) 100%
+    );
+
+  font-family:
+    "Manrope",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 16px;
+  line-height: 1.65;
+
+  transition:
+    color var(--transition),
+    background-color var(--transition);
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul,
+ol {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-heading);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+p {
+  margin-top: 0;
+}
+
+/* =========================================================
+   PAGE WRAPPER
+========================================================= */
+
+.site-wrapper {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.site-main {
+  flex: 1;
+
+  /*
+    Header fixed kabatti main content header kindha
+    start avvadaniki ee padding required.
+  */
+
+  padding-top: var(--full-header-height);
+}
+
+/*
+  Mee body ki direct padding-top already apply chesthe,
+  site-main padding duplicate avvakunda body padding remove cheyyandi.
+*/
+
+body:has(.site-main) {
+  padding-top: 0;
+}
+
+/* =========================================================
+   CONTAINERS
+========================================================= */
+
+.container,
+.lares-container {
+  width: min(
+    var(--container-width),
+    calc(100% - 48px)
+  );
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================================
+   COMMON GRID
+========================================================= */
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid.two-col {
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+}
+
+.cards-grid {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.cards-grid.three-col {
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+}
+
+.cards-grid.four-col {
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+}
+
+/* =========================================================
+   SECTION SPACING
+========================================================= */
+
+.section-spacing {
+  padding: 5.5rem 0;
+}
+
+section[id] {
+  scroll-margin-top:
+    calc(var(--full-header-height) + 20px);
+}
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+  margin-bottom: 2rem;
+}
+
+.section-heading.centered {
+  max-width: 780px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+}
+
+.section-heading h2,
+.page-banner h1,
+.hero-content h1,
+.about-overview h2,
+.cta-card h2 {
+  color: var(--text-heading);
+  line-height: 1.15;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  font-size:
+    clamp(1.9rem, 3vw, 2.75rem);
+}
+
+.section-heading p {
+  max-width: 720px;
+
+  margin-top: 1rem;
+  margin-bottom: 0;
+
+  color: var(--text-body);
+}
+
+.section-heading.centered p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 1rem;
+  padding: 0.55rem 0.95rem;
+
+  border:
+    1px solid rgba(244, 122, 0, 0.24);
+
+  border-radius: 999px;
+
+  color: var(--orange-dark);
+  background: var(--orange-soft);
+
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn {
+  min-height: 48px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 0.82rem 1.35rem;
+
+  border:
+    1px solid transparent;
+
+  border-radius: 8px;
+
+  font-weight: 800;
+  line-height: 1.2;
+
+  transition:
+    color var(--transition),
+    background-color var(--transition),
+    border-color var(--transition),
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  color: var(--white);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--orange),
+      var(--orange-dark)
+    );
+
+  box-shadow:
+    0 12px 28px rgba(244, 122, 0, 0.28);
+}
+
+.btn-primary:hover {
+  color: var(--white);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--orange-light),
+      var(--orange)
+    );
+
+  box-shadow:
+    0 16px 34px rgba(244, 122, 0, 0.36);
+}
+
+.btn-secondary {
+  color: var(--navy);
+
+  border-color:
+    rgba(23, 18, 40, 0.16);
+
+  background: var(--white);
+}
+
+.btn-secondary:hover {
+  color: var(--orange-dark);
+
+  border-color:
+    rgba(244, 122, 0, 0.38);
+
+  background: var(--orange-soft);
+}
+
+.btn-outline {
+  color: var(--orange-dark);
+
+  border-color:
+    rgba(244, 122, 0, 0.35);
+
+  background: transparent;
+}
+
+.btn-outline:hover {
+  color: var(--white);
+
+  border-color: var(--orange);
+
+  background: var(--orange);
+}
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.info-card,
+.feature-card,
+.process-card,
+.service-card,
+.contact-card,
+.faq-item,
+.cta-card,
+.overview-visual,
+.hero-visual,
+.stat-card {
+  border:
+    1px solid var(--border);
+
+  border-radius: 18px;
+
+  background: var(--surface);
+
+  box-shadow: var(--shadow);
+
+  transition:
+    transform var(--transition),
+    background-color var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.info-card:hover,
+.feature-card:hover,
+.process-card:hover,
+.service-card:hover,
+.contact-card:hover,
+.faq-item:hover {
+  border-color:
+    rgba(244, 122, 0, 0.3);
+
+  transform: translateY(-5px);
+
+  box-shadow: var(--shadow-hover);
+}
+
+/* =========================================================
+   COMMON CARD ICON
+========================================================= */
+
+.card-icon,
+.feature-icon,
+.service-icon,
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 54px;
+  height: 54px;
+
+  border-radius: 12px;
+
+  color: var(--white);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--orange),
+      var(--orange-dark)
+    );
+
+  box-shadow:
+    0 10px 24px rgba(244, 122, 0, 0.25);
+}
+
+/* =========================================================
+   FORMS
+========================================================= */
+
+.form-status {
+  margin-top: 1rem;
+
+  font-weight: 700;
+}
+
+.form-status.success {
+  color: var(--success);
+}
+
+.form-status.error {
+  color: var(--danger);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+
+  padding: 0.9rem 1rem;
+
+  border:
+    1px solid var(--border-dark);
+
+  border-radius: 10px;
+
+  color: var(--text-dark);
+
+  background: var(--surface-alt);
+
+  transition:
+    color var(--transition),
+    background-color var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+textarea {
+  min-height: 145px;
+  resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+
+  border-color: var(--orange);
+
+  box-shadow:
+    0 0 0 3px rgba(244, 122, 0, 0.14);
+}
+
+label {
+  display: block;
+
+  margin-bottom: 0.45rem;
+
+  color: var(--text-heading);
+
+  font-weight: 750;
+}
+
+.field-group,
+.checkbox-group {
+  margin-bottom: 1rem;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 0.65rem;
+}
+
+.checkbox-group input {
+  width: auto;
+
+  margin-top: 0.25rem;
+
+  accent-color: var(--orange);
+}
+
+.error-message {
+  min-height: 1.1rem;
+
+  margin-top: 0.4rem;
+
+  color: var(--danger);
+
+  font-size: 0.88rem;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  color: var(--text-body);
+}
+
+th,
+td {
+  padding: 13px 15px;
+
+  border-bottom:
+    1px solid var(--border);
+
+  text-align: left;
+}
+
+th {
+  color: var(--text-heading);
+  background: var(--orange-soft);
+
+  font-weight: 800;
+}
+
+/* =========================================================
+   SELECTION
+========================================================= */
+
+::selection {
+  color: var(--white);
+  background: var(--orange);
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.skip-link {
+  position: absolute;
+
+  top: 0;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  top: 1rem;
+  left: 1rem;
+
+  z-index: 20000;
+
+  padding: 0.75rem 1rem;
+
+  border-radius: 8px;
+
+  color: var(--white);
+  background: var(--navy);
+}
+
+:focus-visible {
+  outline:
+    3px solid rgba(244, 122, 0, 0.55);
+
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+.reveal {
+  opacity: 0;
+
+  transform: translateY(24px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    transition-duration:
+      0.01ms !important;
+
+    scroll-behavior:
+      auto !important;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - LARGE TABLET
+========================================================= */
+
+@media (max-width: 1199px) {
+  .cards-grid.three-col {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .cards-grid.four-col {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+  :root {
+    --top-header-height: 38px;
+    --main-header-height: 76px;
+    --full-header-height: 114px;
+  }
+
+  .grid.two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-grid.three-col,
+  .cards-grid.four-col {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .section-spacing {
+    padding: 4.4rem 0;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+  :root {
+    --top-header-height: 36px;
+    --main-header-height: 70px;
+    --full-header-height: 106px;
+  }
+
+  .container,
+  .lares-container {
+    width:
+      calc(100% - 28px);
+  }
+
+  .cards-grid.three-col,
+  .cards-grid.four-col {
+    grid-template-columns: 1fr;
+  }
+
+  .section-spacing {
+    padding: 3.4rem 0;
+  }
+
+  .section-heading h2 {
+    font-size:
+      clamp(1.75rem, 8vw, 2.25rem);
+  }
+
+  .btn {
+    min-height: 46px;
+
+    padding:
+      0.78rem 1.15rem;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .container,
+  .lares-container {
+    width:
+      calc(100% - 22px);
+  }
+
+  .section-spacing {
+    padding: 3rem 0;
+  }
+}
